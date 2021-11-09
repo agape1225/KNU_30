@@ -18,7 +18,6 @@ public class TestController {
         List<String> testList = new ArrayList<String>();
         testList.add("a");
         testList.add("b");
-        testList.add("c");
         mav.addObject("list", testList);
 
         return mav;
