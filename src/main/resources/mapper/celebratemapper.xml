@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kang.knu_30.mapper.CelebrateMapper">
+    <insert id="add_celebrate">
+        insert into
+            celebrate(author, club, content, regdate, id)
+        VALUES(#{author}, #{club}, #{content}, #{regdate}, #{id})
+    </insert>
+
+</mapper>

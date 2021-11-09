@@ -1,6 +1,9 @@
 package com.kang.knu_30.controller;
 
 import com.kang.knu_30.dto.CelebrateDto;
+import com.kang.knu_30.service.CelebrateService;
+import com.kang.knu_30.utility.Utility;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +16,11 @@ import java.util.List;
 
 @Controller
 public class CelebrateController {
+
+    @Autowired
+    CelebrateService celebrateService;
+
+    Utility utility = new Utility();
 
     @RequestMapping("/test_cel")
     public ModelAndView test() throws Exception{
@@ -29,6 +37,9 @@ public class CelebrateController {
         System.out.println(cDto.getClub());
         System.out.println(cDto.getContent());
         System.out.println(cDto.getId());
+
+        celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
+                utility.getToday(), Integer.toString(cDto.getId()));
 
         return mav;
     }
