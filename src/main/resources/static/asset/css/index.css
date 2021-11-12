@@ -30,17 +30,30 @@ ul {
 
 .header nav {
     display: flex;
+    align-items: center;
 }
 
 .logo {
     background-image: url("/asset/img/white-logo.svg");
 }
 
-.menu {
+.menu, .sidebar-on-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
+}
+
+.sidebar-on-btn {
+    position: relative;
+    color: white;
+    padding: 0 16px;
+    height: 34px;
+    border: 1px solid white;
+    cursor: pointer;
+
+    transition: .25s;
+    overflow: hidden;
 }
 
 .menu-item {
@@ -68,6 +81,47 @@ ul {
 .menu-item:not(:hover):after {
     opacity: 0;
     transform: translateX(-50%) scaleX(0);
+}
+
+.sidebar-check:checked + .sidebar {
+    display: block;
+    transform: translateX(0);
+}
+
+.sidebar {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #C0AD9A;
+    transform: translateX(100%);
+    transition: .25s;
+    z-index: 1;
+    padding: 0 40px;
+}
+
+.sidebar-off-btn {
+    display: block;
+    width: 100%;
+    height: 88px;
+    background-image: url("/asset/img/cancel.svg");
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+.sidebar-item {
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    color: #333;
 }
 
 .banner {
@@ -118,7 +172,7 @@ ul {
     overflow: hidden;
 }
 
-.cta:before {
+.cta:before, .sidebar-on-btn:before {
     content: ' ';
     position: absolute;
     width: 150%;
@@ -130,16 +184,16 @@ ul {
     transition: inherit;
 }
 
-.cta:hover {
+.cta:hover, .sidebar-on-btn:hover {
     color: #333;
 }
 
-.cta:hover:before {
+.cta:hover:before, .sidebar-on-btn:hover:before {
     right: -25%;
     transform: skewX(-15deg) scaleX(1);
 }
 
-.cta > span {
+.cta > span, .sidebar-on-btn > span {
     z-index: 1;
 }
 
@@ -152,9 +206,9 @@ ul {
         height: 522px;
     }
     .logo {
-        background-size: 40px 40px;
-        width: 40px;
-        height: 40px;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
     }
 
     .banner-content {
@@ -168,6 +222,14 @@ ul {
         color: white;
         line-height: 52px;
         letter-spacing: -0.0417em;
+    }
+
+    .sidebar-on-btn {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
     }
 }
 
@@ -196,6 +258,14 @@ ul {
         color: white;
         line-height: 73px;
         letter-spacing: -0.0417em;
+    }
+
+    .sidebar-on-btn {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
     }
 }
 
@@ -227,6 +297,14 @@ ul {
         color: white;
         line-height: 83px;
         letter-spacing: -0.0417em;
+    }
+
+    .sidebar-on-btn {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
     }
 }
 

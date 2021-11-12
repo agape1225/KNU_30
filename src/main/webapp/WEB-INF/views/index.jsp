@@ -20,9 +20,21 @@
                 <li class="menu-item">학부 &#149 동아리</li>
                 <li class="menu-item">졸업 축하 인사말</li>
             </ul>
+            <label for="sidebar-check" class="sidebar-on-btn">
+                <span>메뉴</span>
+            </label>
         </nav>
     </div>
 </header>
+<input type="checkbox" hidden class="sidebar-check" id="sidebar-check" />
+<aside class="sidebar">
+    <label class="sidebar-off-btn" for="sidebar-check"></label>
+    <ul>
+        <li class="sidebar-item">축제 &#149 행사</li>
+        <li class="sidebar-item">학부 &#149 동아리</li>
+        <li class="sidebar-item">졸업 축하 인사말</li>
+    </ul>
+</aside>
 <main>
     <div class="container">
         <section class="banner">
