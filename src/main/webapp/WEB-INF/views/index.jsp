@@ -6,21 +6,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap-grid.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="/asset/css/index.css" type="text/css"/>
     <title>ICT 공학부 30주년</title></head>
 <body>
 <header class="header">
     <div class="container">
         <nav>
-            <h1 class="logo">
-                <img src="/asset/img/white-logo.svg" alt="강남대학교 로고"/>
-            </h1>
-            <ul>
-                <li>축제 &#149 행사</li>
-                <li>학부 &#149 동아리</li>
-                <li>졸업 축하 인사말</li>
+            <div class="logo"></div>
+            <ul class="menu">
+                <li class="menu-item">축제 &#149 행사</li>
+                <li class="menu-item">학부 &#149 동아리</li>
+                <li class="menu-item">졸업 축하 인사말</li>
             </ul>
         </nav>
     </div>
@@ -30,11 +28,19 @@
         <section class="banner">
             <div class="banner-content">
                 <h1 class="banner-title">
-                    강남대학교 <br>
-                    ICT 공학부 30주년 행사
+                    ICT 공학부 30주년이 된 것을
+                    진심으로 축하합니다.
                 </h1>
-                <span>강남대학교 ICT 공학부 30주년 기념 행사에 오신 여러분 환영합니다!</span>
-                <button class="cta">더보기</button>
+                <span class="banner-subtitle">
+                    졸업생들을 위한 축하 글과 학과 이벤트에 참여해
+                    소정의 상품도 받아가세요!
+                </span>
+                <div class="cta">
+                    <span>더보기</span>
+                </div>
+            </div>
+            <div class="banner-video">
+                <canvas class="video"></canvas>
             </div>
         </section>
         <section class="introduce">
@@ -145,7 +151,9 @@
     </div>
 </main>
 <footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by <a href="#">CEL</a></footer>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 <script src="/bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
 <script src="/asset/js/index.js"></script>
 </body>

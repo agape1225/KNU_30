@@ -1,4 +1,238 @@
-body {
-    font-family: 'Roboto', sans-serif;
+* {
+    letter-spacing: -0.0417em;
+}
+
+html, body {
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header nav {
+    display: flex;
+}
+
+.logo {
+    background-image: url("/asset/img/white-logo.svg");
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.menu-item {
+    position: relative;
+    font-size: 0.938rem;
+    color: white;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.menu-item:after {
+    content: ' ';
+    position: absolute;
+    width: 1.25rem;
+    height: 2px;
+    background-color: #c0ad9a;
+    bottom: -0.4rem;
+    left: 50%;
+    opacity: .5;
+    transform: translateX(-50%) scaleX(1);
+    transition: inherit;
+}
+
+.menu-item:not(:hover):after {
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0);
+}
+
+.banner {
+    width: 100%;
+    height: 56.25vw;
+}
+
+.banner-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1b1e21;
+    width: 100vw;
+    height: 56.25vw;
+    z-index: -1;
+}
+
+.banner-subtitle {
+    font-size: 0.938rem;
+    color: white;
+    margin: 30px 0 50px 0;
+    width: 314px;
+    line-height: 28px;
+    letter-spacing: -0.0417em;
+}
+
+.cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.938rem;
+    padding: 0 16px;
+    width: 76px;
+    height: 36px;
+    border: 1px solid white;
+    cursor: pointer;
+
+    transition: .25s;
+    overflow: hidden;
+}
+
+.cta:before {
+    content: ' ';
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    right: 110%;
+    z-index: 0;
+    transform: skewX(-15deg) scaleX(0.2);
+    background-color: white;
+    transition: inherit;
+}
+
+.cta:hover {
+    color: #333;
+}
+
+.cta:hover:before {
+    right: -25%;
+    transform: skewX(-15deg) scaleX(1);
+}
+
+.cta > span {
+    z-index: 1;
+}
+
+@media (min-width: 360px) {
+    .header {
+        height: 88px;
+    }
+    .banner, .banner-video {
+        width: 100%;
+        height: 522px;
+    }
+    .logo {
+        background-size: 40px 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .banner-content {
+        margin: 0;
+    }
+
+    .banner-title {
+        /*width: 467px;*/
+        font-size: 2.250rem;
+        font-weight: 500;
+        color: white;
+        line-height: 52px;
+        letter-spacing: -0.0417em;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 146px;
+    }
+    .banner, .banner-video {
+        width: 100%;
+        height: 100vw;
+    }
+    .logo {
+        background-size: 74px 74px;
+        width: 74px;
+        height: 74px;
+    }
+
+    .banner-content {
+        margin: 0;
+    }
+
+    .banner-title {
+        width: 467px;
+        font-size: 3.125rem;
+        font-weight: 500;
+        color: white;
+        line-height: 73px;
+        letter-spacing: -0.0417em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        height: 150px;
+    }
+
+    .banner, .banner-video {
+        width: 100%;
+        height: 61.8333vw;
+    }
+
+    .logo {
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .banner-content {
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+
+    .banner-title {
+        width: 726px;
+        font-size: 3.75rem;
+        font-weight: 500;
+        color: white;
+        line-height: 83px;
+        letter-spacing: -0.0417em;
+    }
+}
+
+@media (min-width: 1320px) {
+    .banner, .banner-video {
+        width: 100%;
+        height: 56.25vw;
+    }
 }
