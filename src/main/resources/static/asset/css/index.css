@@ -124,6 +124,10 @@ ul {
     color: #333;
 }
 
+.section-content {
+    display: flex;
+}
+
 .banner {
     width: 100%;
     height: 56.25vw;
@@ -366,6 +370,59 @@ ul {
     opacity: .75;
 }
 
+.club-card-list {
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.club-card {
+    padding-bottom: 150%;
+    transition: .25s;
+}
+
+.card-info, .club-card {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.club-state {
+    margin: 60px auto 130px;
+}
+
+.club-state-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-state-item {
+    cursor: pointer;
+    width: 40px;
+    height: 5px;
+    background: #C4C4C4;
+    margin-right: 15px;
+    transition: .25s;
+}
+
+.club-card:not(.active) {
+    transform: scale(0.8);
+}
+
+.club-state-item.active {
+    background: #C0AD9A;
+}
+
+.club-state-item:nth-last-child(1) {
+    margin-right: 0;
+}
+
 @media (min-width: 360px) {
     .header {
         height: 88px;
@@ -405,7 +462,7 @@ ul {
         display: none;
     }
 
-    .introduce {
+    .introduce, .club {
         margin-top: 100px;
     }
 }
@@ -448,7 +505,7 @@ ul {
         display: flex;
     }
 
-    .introduce {
+    .introduce, .club {
         margin-top: 130px;
     }
 }
@@ -492,7 +549,7 @@ ul {
         display: flex;
     }
 
-    .introduce {
+    .introduce, .club {
         margin-top: 130px;
     }
 }

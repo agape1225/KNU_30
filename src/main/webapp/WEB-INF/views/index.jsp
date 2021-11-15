@@ -62,7 +62,7 @@
                 <span>푸른비전, 청춘의 열정이 살아 숨쉬는 <strong class="underline">강남대학교</strong></span>
             </div>
             <div class="section-content row">
-                <div class="col-md-6 ani-in introduce-card-1">
+                <div class="col-md-6 col-12 ani-in introduce-card-1">
                     <div class="card introduce-card">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ani-in introduce-card-2">
+                <div class="col-md-6 col-12 ani-in introduce-card-2">
                     <div class="card introduce-card">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
@@ -82,8 +82,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ani-in introduce-card-3">
-                    <div class="card introduce-card">
+                <div class="col-md-6 col-12 ani-in introduce-card-3">
+                    <div class="card introduce-card mb-md-0">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
@@ -92,8 +92,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ani-in introduce-card-4">
-                    <div class="card introduce-card">
+                <div class="col-md-6 col-12 ani-in introduce-card-4">
+                    <div class="card introduce-card mb-0">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
@@ -106,23 +106,94 @@
         </section>
         <section class="club">
             <div class="section-header">
-                <h1>학부 &#149 동아리</h1>
-                <span>학부 <strong>7가지 동아리</strong> <br></span>
-                <span>푸른비전, 청춘의 열정이 살아 숨쉬는 <strong>강남대학교</strong></span>
+                <h1 class="underline">학부 &#149 동아리</h1>
+                <span>ICT 공학부의 <strong class="underline">7가지</strong> 동아리</span>
             </div>
-            <div class="section-content">
-                <div class="card">
-                    <img src="#" alt="" class="card-img">
-                    <h1 class="card-title">ICT 공과 대학</h1>
-                    <span class="card-description"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores assumenda autem consectetur, consequatur cupiditate eos harum in incidunt, laboriosam laudantium nobis nostrum numquam quae, qui recusandae rem sequi soluta.</span><span>Aliquam asperiores, commodi delectus error illo, impedit ipsam minima non nulla quae quasi, repudiandae sed. Ab amet doloribus explicabo fuga, laborum nostrum odit placeat, qui quibusdam, sequi tempora temporibus vero.</span></span>
-                    <div class="card-info"></div>
+            <div class="section-content club-content ani-in">
+                <div class="club-card-list row" style="transform: translateX(0)">
+                    <div class="offset-xl-4 offset-md-3 offset-1"></div>
+                    <div class="col-xl-4 col-md-6 col-10" id="CEL" data-index="0">
+                        <div class="card club-card active">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">CEL</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="KIS" data-index="1">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">KIS</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="MAC" data-index="2">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">MAC</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="CAVE" data-index="3">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">CAVE</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="NET" data-index="4">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">넷앱</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="MOUSE" data-index="5">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">마우스</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-10" id="AUNE" data-index="6">
+                        <div class="card club-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <h1 class="card-title">아우내</h1>
+                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="#" alt="" class="card-img">
-                    <h1 class="card-title">동아리</h1>
-                    <span class="card-description">아우내, 마우스, CEL, 넷앱, KIS, MAC, CAVE 소개</span>
-                    <div class="card-info"></div>
-                </div>
+            </div>
+            <div class="club-state">
+                <ul class="club-state-list">
+                    <li class="club-state-item start-club-state-item active" data-id="CEL" data-index="0"></li>
+                    <li class="club-state-item" data-id="KIS" data-index="1"></li>
+                    <li class="club-state-item" data-id="MAC" data-index="2"></li>
+                    <li class="club-state-item" data-id="CAVE" data-index="3"></li>
+                    <li class="club-state-item" data-id="NET" data-index="4"></li>
+                    <li class="club-state-item" data-id="MOUSE" data-index="5"></li>
+                    <li class="club-state-item" data-id="AUNE" data-index="6"></li>
+                </ul>
             </div>
         </section>
         <section class="event">
