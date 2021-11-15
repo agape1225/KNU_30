@@ -197,14 +197,185 @@ ul {
     z-index: 1;
 }
 
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: #C0AD9A;
+}
+
+.section-header {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header h1 {
+    max-width: 200px;
+    width: 100%;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #727272;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.section-header span {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.250rem;
+    color: #322F31;
+}
+
+.section-header span strong {
+    position: relative;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.section-header span strong:after {
+    height: 8px;
+    bottom: 4px;
+    z-index: -1;
+    transition: 0.25s;
+}
+
+.section-header span strong:hover:after {
+    height: 66%;
+}
+
+@keyframes ani-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ani-in {
+    opacity: 0;
+}
+
+.ani-in.active {
+    animation: ani-in 1s 150ms forwards;
+}
+
+.card, .introduce-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.introduce-card {
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-bottom: 60px;
+    transition: .25s;
+}
+
+.introduce-card:hover {
+    transform: translateY(-10px);
+    transition: .25s;
+    box-shadow: 0 0 0 10px #fff, 0 20px 50px rgb(0 0 0 / 25%);
+}
+
+.card-info {
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(35, 36, 38, .4), rgba(35, 36, 38, .8));
+}
+
+.card-title, .card-description {
+    color: #FFF;
+    font-weight: 400;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    font-size: 2.250rem;
+}
+
+.card-description {
+    opacity: .75;
+    font-size: 1.250rem;
+}
+
+.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+.introduce-card-1 .card .card-img {
+    background-image: url("/asset/img/test1.jpg");
+}
+
+.introduce-card-2 .card .card-img {
+    background-image: url("/asset/img/test2.jpg");
+}
+
+.introduce-card-3 .card .card-img {
+    background-image: url("/asset/img/test3.jpg");
+}
+
+.introduce-card-4 .card .card-img {
+    background-image: url("/asset/img/test4.jpg");
+}
+
+.card-img {
+    transition: .75s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-img-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #322f31;
+    opacity: 0;
+    transition: .75s;
+}
+
+.introduce-card:hover .card-img-filter {
+    opacity: .75;
+}
+
 @media (min-width: 360px) {
     .header {
         height: 88px;
     }
+
     .banner, .banner-video {
         width: 100%;
         height: 522px;
     }
+
     .logo {
         background-size: 50px 50px;
         width: 50px;
@@ -216,6 +387,8 @@ ul {
     }
 
     .banner-title {
+        max-width: 310px;
+        width: 100%;
         /*width: 467px;*/
         font-size: 2.250rem;
         font-weight: 500;
@@ -231,16 +404,22 @@ ul {
     .menu {
         display: none;
     }
+
+    .introduce {
+        margin-top: 100px;
+    }
 }
 
 @media (min-width: 768px) {
     .header {
         height: 146px;
     }
+
     .banner, .banner-video {
         width: 100%;
         height: 100vw;
     }
+
     .logo {
         background-size: 74px 74px;
         width: 74px;
@@ -252,7 +431,8 @@ ul {
     }
 
     .banner-title {
-        width: 467px;
+        max-width: 467px;
+        width: 100%;
         font-size: 3.125rem;
         font-weight: 500;
         color: white;
@@ -266,6 +446,10 @@ ul {
 
     .menu {
         display: flex;
+    }
+
+    .introduce {
+        margin-top: 130px;
     }
 }
 
@@ -291,7 +475,8 @@ ul {
     }
 
     .banner-title {
-        width: 726px;
+        max-width: 554px;
+        width: 100%;
         font-size: 3.75rem;
         font-weight: 500;
         color: white;
@@ -305,6 +490,10 @@ ul {
 
     .menu {
         display: flex;
+    }
+
+    .introduce {
+        margin-top: 130px;
     }
 }
 
