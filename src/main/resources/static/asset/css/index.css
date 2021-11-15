@@ -423,6 +423,22 @@ ul {
     margin-right: 0;
 }
 
+.event-img {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+/*.event-img {*/
+/*    background-image: url("/asset/img/desktop_banner.png");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: contain;*/
+/*    width: 100%;*/
+/*    height: 502px;*/
+/*    cursor: pointer;*/
+/*}*/
+
 @media (min-width: 360px) {
     .header {
         height: 88px;
