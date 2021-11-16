@@ -10,4 +10,20 @@
         VALUES(#{author}, #{club}, #{content}, #{regdate}, #{id})
     </insert>
 
+    <select id="get_celebrate" resultType="CelebrateDto_DB" >
+        select * from celebrate
+    </select>
+
+    <select id="get_celebrate_with_club" resultType="CelebrateDto_DB">
+        select * from celebrate
+        where club = #{club}
+    </select>
+
+    <select id="get_celebrate_with_num" resultType="CelebrateDto_DB">
+        select * from celebrate
+        limit #{start_num}, 9;
+    </select>
+
+
+
 </mapper>

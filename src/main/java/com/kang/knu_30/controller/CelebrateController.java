@@ -25,6 +25,13 @@ public class CelebrateController {
     @RequestMapping("/test_cel")
     public ModelAndView test() throws Exception{
         ModelAndView mav = new ModelAndView("test_comment");
+        return mav;
+    }
+
+    @RequestMapping("/test_get_comment")
+    public ModelAndView test_get_comment() throws Exception{
+        ModelAndView mav = new ModelAndView("test_get_comment");
+        mav.addObject("comment_list", celebrateService.get_celebrate_with_num(9));
 
         return mav;
     }
