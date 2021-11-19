@@ -12,7 +12,7 @@ public class MainController {
 
     @RequestMapping("/")
     public ModelAndView main() throws Exception{
-        System.out.println("Controller에 들어왔다!");
+        System.out.println("controller find");
         ModelAndView mav = new ModelAndView("index");
 
         return mav;
