@@ -248,7 +248,7 @@
         </div>
     </section>
 </main>
-<footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by <a href="#">CEL</a></footer>
+<footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW" target="_blank">CEL</a></footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
