@@ -198,56 +198,54 @@
         </section>
     </div>
     <section class="event">
-        <img src="/asset/img/desktop_banner.png" alt="" class="d-none d-md-block event-img">
-        <img src="/asset/img/mobile_banner.png" alt="" class="d-md-none d-block event-img">
+        <img src="/asset/img/desktop_banner_2.png" alt="" class="d-none d-sm-block event-img">
+        <img src="/asset/img/mobile_banner_2.png" alt="" class="d-sm-none d-block event-img">
     </section>
     <section class="celebration">
-        <h1>졸업 축하 글</h1>
-        <div class="d-flex">
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
+        <div class="container d-flex flex-column align-items-center">
+            <h1 class="celebration-title">학부생이 졸업생에게 전하는 한마디</h1>
+            <div class="row celebration-card-list">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card celebration-card">
+                        <div class="card-name">홍길동</div>
+                        <div class="card-sub">201904063 / ICT 공학부</div>
+                        <span class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
+                    </span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card celebration-card">
+                        <div class="card-name">홍길동</div>
+                        <div class="card-sub">201904063 / ICT 공학부</div>
+                        <span class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
+                    </span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card celebration-card">
+                        <div class="card-name">홍길동</div>
+                        <div class="card-sub">201904063 / ICT 공학부</div>
+                        <span class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
+                    </span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card celebration-card">
+                        <div class="card-name">홍길동</div>
+                        <div class="card-sub">201904063 / ICT 공학부</div>
+                        <span class="card-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
+                    </span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
-            </div>
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
-            </div>
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
-            </div>
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
-            </div>
-            <div class="card">
-                <div class="card-name">홍길동</div>
-                <div class="card-info">201904063 / ICT 공학부</div>
-                <span class="card-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel voluptatum. Aliquam consequuntur eos numquam.</span><span>Beatae id laboriosam molestiae quidem quis? Aliquam amet animi at deleniti error facere fugit id magnam molestiae nobis nulla numquam perferendis quidem recusandae repellat reprehenderit sequi, tempore vel, voluptatem, voluptatum.
-                </span>
+            <div class="cta">
+                <span>더보기</span>
             </div>
         </div>
-        <div class="loading"></div>
     </section>
 </main>
 <footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by <a href="#">CEL</a></footer>
