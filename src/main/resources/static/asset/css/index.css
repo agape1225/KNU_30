@@ -26,6 +26,7 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .header nav {
@@ -85,11 +86,14 @@ ul {
 
 .sidebar-check:checked + .sidebar {
     display: block;
+    visibility: visible;
     transform: translateX(0);
+    transition: transform .25s, visibility 0s 0s;
 }
 
 .sidebar {
     display: block;
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;
@@ -97,7 +101,7 @@ ul {
     height: 100vh;
     background-color: #C0AD9A;
     transform: translateX(100%);
-    transition: .25s;
+    transition: transform .25s, visibility 0s .25s;;
     z-index: 1;
     padding: 0 40px;
 }
@@ -157,6 +161,21 @@ ul {
     width: 314px;
     line-height: 28px;
     letter-spacing: -0.0417em;
+}
+
+#particles-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.particles canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .cta {
@@ -441,15 +460,18 @@ ul {
 }
 
 .celebration-card-list {
-    padding: 90px 0;
+    padding-top: 90px;
+    padding-bottom: 30px;
 }
 
 .celebration-card {
     background-color: white;
     height: 0;
-    padding: 40px 40px 75% 40px;
+    /*padding: 40px 40px 75% 40px;*/
+    padding: 40px;
     border-radius: 20px;
     margin-bottom: 60px;
+    overflow: scroll;
 }
 
 .celebration-card .card-name {
@@ -459,7 +481,7 @@ ul {
 }
 
 .celebration-card .card-sub {
-    font-size: 0.750rem;
+    font-size: 0.875rem;
     color: #777;
     margin-bottom: 12px;
 }
@@ -469,6 +491,52 @@ ul {
     color: black;
     opacity: 1;
 }
+
+.celebration .cta {
+    margin-bottom: 90px;
+}
+
+.celebration-form {
+    width: 100%;
+}
+
+input.form-controller {
+    color: black;
+    width: 100%;
+    height: 60px;
+    font-size: 1.063rem;
+    border: none;
+    outline: none;
+}
+
+textarea.form-controller {
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-size: 1.063rem;
+    border: none;
+    outline: none;
+}
+
+input.form-controller::placeholder, textarea.form-controller::placeholder {
+    color: #727272;
+}
+
+select {
+    width: 100%; /* 원하는 너비설정 */
+    height: 60px;
+    padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: inherit; /* 폰트 상속 */
+    background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+    border: 1px solid #999;
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: white;
+}
+
 
 .footer {
     width: 100%;
@@ -485,7 +553,6 @@ ul {
     color: white;
     text-decoration: none;
 }
-
 @media (min-width: 360px) {
     .header {
         height: 88px;
@@ -527,6 +594,10 @@ ul {
 
     .introduce, .club {
         margin-top: 100px;
+    }
+
+    .celebration-card {
+        height: 230px;
     }
 }
 
@@ -571,6 +642,10 @@ ul {
     .introduce, .club {
         margin-top: 130px;
     }
+
+    .celebration-card {
+        height: 301px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -614,6 +689,10 @@ ul {
 
     .introduce, .club {
         margin-top: 130px;
+    }
+
+    .celebration-card {
+        height: 317px;
     }
 }
 
