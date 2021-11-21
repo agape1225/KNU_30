@@ -208,7 +208,7 @@
         <div class="container d-flex flex-column align-items-center">
             <h1 class="celebration-title">학부생이 졸업생에게 전하는 한마디</h1>
             <div class="row celebration-card-list">
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card celebration-card">
                         <div class="card-name">홍길동</div>
                         <div class="card-sub">201904063 / ICT 공학부</div>
@@ -217,7 +217,7 @@
                     </span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card celebration-card">
                         <div class="card-name">홍길동</div>
                         <div class="card-sub">201904063 / ICT 공학부</div>
@@ -226,7 +226,7 @@
                     </span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card celebration-card">
                         <div class="card-name">홍길동</div>
                         <div class="card-sub">201904063 / ICT 공학부</div>
@@ -235,7 +235,7 @@
                     </span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card celebration-card">
                         <div class="card-name">홍길동</div>
                         <div class="card-sub">201904063 / ICT 공학부</div>
@@ -248,10 +248,49 @@
             <div class="cta">
                 <span>더보기</span>
             </div>
+<%--            <form class="celebration-form">--%>
+<%--                <div class="row">--%>
+<%--                    <div class="col-6 row">--%>
+<%--                        <div class="form-group col-6">--%>
+<%--                            <input type="text" name="author" class="form-controller" placeholder="이름"/>--%>
+<%--                        </div>--%>
+<%--                        <div class="form-group col-6">--%>
+<%--                            <input type="text" name="id" class="form-controller" placeholder="학번"/>--%>
+<%--                        </div>--%>
+<%--                        <div class="form-group col-6">--%>
+<%--                            <input type="text" name="major" class="form-controller" placeholder="학과"/>--%>
+<%--                        </div>--%>
+<%--                        <div class="form-group col-6">--%>
+<%--                            <select name="club" class="form-controller">--%>
+<%--                                <option selected value="">동아리</option>--%>
+<%--                                <option value="CEL">CEL</option>--%>
+<%--                                <option value="KIS">KIS</option>--%>
+<%--                                <option value="MAC">MAC</option>--%>
+<%--                                <option value="CAVE">CAVE</option>--%>
+<%--                                <option value="NET">넷엡</option>--%>
+<%--                                <option value="MOUSE">마우스</option>--%>
+<%--                                <option value="AUNE">아우내</option>--%>
+<%--                            </select>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="col-6 row">--%>
+<%--                        <div class="form-group col-12">--%>
+<%--                            <textarea name="content" class="form-controller" cols="30" rows="10"--%>
+<%--                                      placeholder="축하 메세지"></textarea>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="col-12 d-flex align-items-end">--%>
+<%--                        <div class="cta">--%>
+<%--                            <span>전송</span>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </form>--%>
         </div>
     </section>
 </main>
-<footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW" target="_blank">CEL</a></footer>
+<footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW"
+                                                                              target="_blank">CEL</a></footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
