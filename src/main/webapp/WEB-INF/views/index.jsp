@@ -40,7 +40,7 @@
         <section class="banner">
             <div class="banner-content">
                 <h1 class="banner-title">
-                    ICT 공학부 30주년을
+                    SW응용학부 30주년을
                     진심으로 축하합니다.
                 </h1>
                 <span class="banner-subtitle">
@@ -53,6 +53,9 @@
             </div>
             <div class="banner-video">
                 <canvas class="video"></canvas>
+            </div>
+            <div id="particles-dots" class="particles">
+                <!--        CANVAS        -->
             </div>
         </section>
         <section class="introduce">
@@ -254,5 +257,7 @@
         crossorigin="anonymous"></script>
 <script src="/bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
 <script src="/asset/js/index.js"></script>
+<script src="/asset/js/particles.js"></script>
+<script src="/asset/js/particles-dots.js"></script>
 </body>
 </html>
