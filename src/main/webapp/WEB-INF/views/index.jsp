@@ -19,9 +19,9 @@
         <nav>
             <div class="logo"></div>
             <ul class="menu">
-                <li class="menu-item">축제 &#149 행사</li>
-                <li class="menu-item">학부 &#149 동아리</li>
-                <li class="menu-item">졸업 축하 인사말</li>
+                <li class="menu-item">홈</li>
+                <li class="menu-item">학부 연혁</li>
+                <li class="menu-item">학부 갤러리</li>
             </ul>
             <label for="sidebar-check" class="sidebar-on-btn">
                 <span>메뉴</span>
@@ -33,9 +33,9 @@
 <aside class="sidebar">
     <label class="sidebar-off-btn" for="sidebar-check"></label>
     <ul>
-        <li class="sidebar-item">축제 &#149 행사</li>
-        <li class="sidebar-item">학부 &#149 동아리</li>
-        <li class="sidebar-item">졸업 축하 인사말</li>
+        <li class="sidebar-item">홈</li>
+        <li class="sidebar-item">학부 연혁</li>
+        <li class="sidebar-item">학부 갤러리</li>
     </ul>
 </aside>
 <main>
