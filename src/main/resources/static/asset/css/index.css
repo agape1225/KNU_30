@@ -166,10 +166,17 @@ ul {
     width: 100vw;
     height: 56.25vw;
     z-index: -1;
-    background-image: url("/asset/img/history-banner.png");
     background-position: center center;
     background-size: cover;
     background-color: rgba(0,0,0,0.52);
+}
+
+.banner-img.history {
+    background-image: url("/asset/img/history-banner.png");
+}
+
+.banner-img.gallery {
+    background-image: url("/asset/img/gallery-banner.png");
 }
 
 .banner-background {
