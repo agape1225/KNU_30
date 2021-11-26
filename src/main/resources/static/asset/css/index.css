@@ -230,6 +230,10 @@ ul {
     background-color: #C0AD9A;
 }
 
+.underline-dark::after {
+    background-color: #8B7A69;
+}
+
 .section-header {
     margin-bottom: 60px;
     display: flex;
@@ -237,40 +241,70 @@ ul {
     align-items: center;
 }
 
+.section-header.left {
+    align-items: flex-start;
+}
+
 .section-header h1 {
-    max-width: 200px;
-    width: 100%;
-    position: relative;
     font-size: 1.5rem;
     font-weight: 400;
+    font-family: 'Noto Serif', serif;
+    position: relative;
     color: #727272;
     text-align: center;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.section-header span {
+.section-header.left h1 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.section-header h1.underline:after {
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title {
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2.250rem;
     color: #322F31;
 }
 
-.section-header span strong {
+.section-title strong {
     position: relative;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.section-header span strong:after {
+.section-title strong:after {
     height: 8px;
     bottom: 4px;
     z-index: -1;
     transition: 0.25s;
 }
 
-.section-header span strong:hover:after {
+.section-title strong:hover:after {
     height: 66%;
+}
+
+.section-header.left .section-title {
+    margin-bottom: 10px;
+}
+
+.section-header.left h1.underline:after {
+    width: 80px;
+    left: 0;
+    transform: translateX(0);
+}
+
+.section-description {
+    font-size: 1.063rem;
+    color: #585453;
+    line-height: 30px;
 }
 
 @keyframes ani-in {
@@ -460,8 +494,7 @@ ul {
 }
 
 .celebration-card-list {
-    padding-top: 90px;
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 .celebration-card {
@@ -471,88 +504,125 @@ ul {
     padding: 40px;
     border-radius: 20px;
     margin-bottom: 60px;
-    overflow: scroll;
+    overflow-y: scroll;
+
+    transition: .25s;
+}
+
+.celebration-card:hover {
+    box-shadow: 0 20px 50px rgb(0 0 0 / 25%);
 }
 
 .celebration-card .card-name {
     color: #191C1F;
-    font-size: 1.500rem;
-    margin-bottom: 6px;
+    font-size: 1.250rem;
+    font-weight: 500;
+    margin-bottom: 4px;
 }
 
 .celebration-card .card-sub {
-    font-size: 0.875rem;
+    font-size: 0.938rem;
     color: #777;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 0.142857px;
 }
 
 .celebration-card .card-description {
     font-size: 1rem;
-    color: black;
     opacity: 1;
+    color: #000;
 }
 
-.celebration .cta {
-    margin-bottom: 90px;
+.cta-black {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #29191A;
+    font-size: 0.875rem;
+    padding: 20px 60px;
+    border: 1px solid #29191A;
+    cursor: pointer;
+
+    transition: .25s;
+    overflow: hidden;
+}
+
+.cta-black:before {
+    content: ' ';
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    right: 110%;
+    z-index: 0;
+    transform: skewX(-15deg) scaleX(0.2);
+    background-color: #29191A;
+    transition: inherit;
+}
+
+.cta-black:hover {
+    color: #fff;
+}
+
+.cta-black:hover:before {
+    right: -25%;
+    transform: skewX(-15deg) scaleX(1);
+}
+
+.cta-black > span {
+    z-index: 1;
 }
 
 .celebration-form {
     width: 100%;
 }
 
-input.form-controller {
-    color: black;
-    width: 100%;
-    height: 60px;
-    font-size: 1.063rem;
-    border: none;
-    outline: none;
-}
-
-textarea.form-controller {
-    color: black;
-    width: 100%;
-    height: 100%;
-    font-size: 1.063rem;
-    border: none;
-    outline: none;
-}
-
-input.form-controller::placeholder, textarea.form-controller::placeholder {
-    color: #727272;
-}
-
-select {
-    width: 100%; /* 원하는 너비설정 */
-    height: 60px;
-    padding: .8em .5em; /* 여백으로 높이 설정 */
-    font-family: inherit; /* 폰트 상속 */
-    background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
-    border: 1px solid #999;
-    border-radius: 0px; /* iOS 둥근모서리 제거 */
-    -webkit-appearance: none; /* 네이티브 외형 감추기 */
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    background-color: white;
-}
-
-
 .footer {
-    width: 100%;
-    height: 88px;
-    background-color: #262626;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 88px;
+    background-color: #262626;
     font-size: 16px;
     color: white;
+    padding: 13px 30px;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
 }
+
+.comment {
+    width: 100%;
+    background-color: #C0AD9A;
+    padding: 100px 0;
+}
+
+.form-controller {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.063rem;
+    font-weight: 400;
+}
+
+input.form-controller {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+textarea.form-controller {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 @media (min-width: 360px) {
     .header {
         height: 88px;
@@ -597,7 +667,7 @@ select {
     }
 
     .celebration-card {
-        height: 230px;
+        height: 240px;
     }
 }
 
