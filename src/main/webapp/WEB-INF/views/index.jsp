@@ -6,10 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="/asset/css/index.css" type="text/css"/>
-    <title>ICT 공학부 30주년</title></head>
+    <title>SW응용학부 30주년</title></head>
 <body>
 <header class="header">
     <div class="container">
@@ -60,9 +63,9 @@
         </section>
         <section class="introduce">
             <div class="section-header">
-                <h1 class="underline">축제 &#149 행사</h1>
-                <span>학부 30주년 <strong class="underline">기념 행사</strong> <br></span>
-                <span>푸른비전, 청춘의 열정이 살아 숨쉬는 <strong class="underline">강남대학교</strong></span>
+                <h1 class="underline">FESTIVAL</h1>
+                <span class="section-title">학부 30주년 <strong class="underline">기념 행사</strong> <br></span>
+                <span class="section-title">푸른비전, 청춘의 열정이 살아 숨쉬는 <strong class="underline">강남대학교</strong></span>
             </div>
             <div class="section-content row">
                 <div class="col-md-6 col-12 ani-in introduce-card-1">
@@ -109,8 +112,8 @@
         </section>
         <section class="club">
             <div class="section-header">
-                <h1 class="underline">학부 &#149 동아리</h1>
-                <span>ICT 공학부의 <strong class="underline">7가지</strong> 동아리</span>
+                <h1 class="underline">CLUB</h1>
+                <span class="section-title">SW응용학부의 <strong class="underline">7가지</strong> 동아리</span>
             </div>
             <div class="section-content club-content ani-in">
                 <div class="club-card-list row" style="transform: translateX(0)">
@@ -206,7 +209,10 @@
     </section>
     <section class="celebration">
         <div class="container d-flex flex-column align-items-center">
-            <h1 class="celebration-title">학부생이 졸업생에게 전하는 한마디</h1>
+            <div class="section-header">
+                <h1 class="underline underline-dark">Congratulations</h1>
+                <span class="section-title">선배님 졸업을 축하합니다!</span>
+            </div>
             <div class="row celebration-card-list">
                 <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card celebration-card">
@@ -245,52 +251,50 @@
                     </div>
                 </div>
             </div>
-            <div class="cta">
+            <div class="cta-black">
                 <span>더보기</span>
             </div>
-<%--            <form class="celebration-form">--%>
-<%--                <div class="row">--%>
-<%--                    <div class="col-6 row">--%>
-<%--                        <div class="form-group col-6">--%>
-<%--                            <input type="text" name="author" class="form-controller" placeholder="이름"/>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group col-6">--%>
-<%--                            <input type="text" name="id" class="form-controller" placeholder="학번"/>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group col-6">--%>
-<%--                            <input type="text" name="major" class="form-controller" placeholder="학과"/>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group col-6">--%>
-<%--                            <select name="club" class="form-controller">--%>
-<%--                                <option selected value="">동아리</option>--%>
-<%--                                <option value="CEL">CEL</option>--%>
-<%--                                <option value="KIS">KIS</option>--%>
-<%--                                <option value="MAC">MAC</option>--%>
-<%--                                <option value="CAVE">CAVE</option>--%>
-<%--                                <option value="NET">넷엡</option>--%>
-<%--                                <option value="MOUSE">마우스</option>--%>
-<%--                                <option value="AUNE">아우내</option>--%>
-<%--                            </select>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                    <div class="col-6 row">--%>
-<%--                        <div class="form-group col-12">--%>
-<%--                            <textarea name="content" class="form-controller" cols="30" rows="10"--%>
-<%--                                      placeholder="축하 메세지"></textarea>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                    <div class="col-12 d-flex align-items-end">--%>
-<%--                        <div class="cta">--%>
-<%--                            <span>전송</span>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </form>--%>
+        </div>
+    </section>
+    <section class="comment">
+        <div class="container">
+            <div class="row">
+                <div class="section-header left col-lg-6 col-12">
+                    <h1 class="underline underline-dark">Comment</h1>
+                    <span class="section-title">졸업생에게 축하글 남기기</span>
+                    <span class="section-description">
+                        졸업생에게 축하글을 남기면, '학부 퀴즈 맞추기 이벤트'에 자동으로 응모됩니다.
+                    </span>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <form action="#" class="comment-form row">
+                        <div class="form-group col-12 col-sm-6">
+                            <input type="text" class="form-controller" placeholder="이름"/>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <input type="text" class="form-controller" placeholder="학번"/>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-controller" placeholder="학과"/>
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea name="" id="" cols="30" rows="10" class="form-controller"
+                                      placeholder="축하 메세지"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="cta-black">
+                                <span>글쓰기</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </main>
-<footer class="footer">© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW"
-                                                                              target="_blank">CEL</a></footer>
+<footer class="footer"><span>© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW"
+                                                                                    target="_blank">CEL</a></span>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
