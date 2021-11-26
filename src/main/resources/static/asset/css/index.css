@@ -137,6 +137,11 @@ ul {
     height: 56.25vw;
 }
 
+.sub-banner {
+    width: 100%;
+    height: 570px;
+}
+
 .banner-content {
     height: 100%;
     display: flex;
@@ -154,6 +159,28 @@ ul {
     z-index: -1;
 }
 
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 56.25vw;
+    z-index: -1;
+    background-image: url("/asset/img/history-banner.png");
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.52);
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 56.25vw;
+    background-color: rgba(0,0,0,0.52);
+}
+
 .banner-subtitle {
     font-size: 0.938rem;
     color: white;
@@ -161,6 +188,11 @@ ul {
     width: 314px;
     line-height: 28px;
     letter-spacing: -0.0417em;
+    z-index: 1;
+}
+
+.banner-title {
+    z-index: 1;
 }
 
 #particles-dots {
@@ -628,7 +660,7 @@ textarea.form-controller {
         height: 88px;
     }
 
-    .banner, .banner-video {
+    .banner, .banner-video, .sub-banner, .banner-img, .banner-background {
         width: 100%;
         height: 522px;
     }
@@ -652,6 +684,11 @@ textarea.form-controller {
         color: white;
         line-height: 52px;
         letter-spacing: -0.0417em;
+    }
+
+    .sub-banner .banner-title {
+        max-width: initial;
+        text-align: center;
     }
 
     .sidebar-on-btn {
@@ -701,6 +738,11 @@ textarea.form-controller {
         letter-spacing: -0.0417em;
     }
 
+    .sub-banner .banner-title {
+        max-width: initial;
+        text-align: center;
+    }
+
     .sidebar-on-btn {
         display: none;
     }
@@ -723,9 +765,15 @@ textarea.form-controller {
         height: 150px;
     }
 
+
     .banner, .banner-video {
         width: 100%;
         height: 61.8333vw;
+    }
+
+    .sub-banner, .sub-banner .banner-img, .sub-banner .banner-background {
+        width: 100%;
+        height: 570px;
     }
 
     .logo {
@@ -749,6 +797,11 @@ textarea.form-controller {
         letter-spacing: -0.0417em;
     }
 
+    .sub-banner .banner-title {
+        max-width: initial;
+        text-align: center;
+    }
+
     .sidebar-on-btn {
         display: none;
     }
@@ -770,5 +823,10 @@ textarea.form-controller {
     .banner, .banner-video {
         width: 100%;
         height: 56.25vw;
+    }
+
+    .sub-banner, .sub-banner .banner-img, .sub-banner .banner-background {
+        width: 100%;
+        height: 570px;
     }
 }
