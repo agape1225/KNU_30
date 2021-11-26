@@ -1,0 +1,25 @@
+.gallery-section {
+    padding: 100px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 390px);
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+
+.gallery-box img {
+    width: 390px;
+    height: 390px;
+    border: 1px solid #C0AD9A;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.3);
+}

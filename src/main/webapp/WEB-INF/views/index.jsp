@@ -14,30 +14,7 @@
     <link rel="stylesheet" href="/asset/css/index.css" type="text/css"/>
     <title>SW응용학부 30주년</title></head>
 <body>
-<header class="header">
-    <div class="container">
-        <nav>
-            <div class="logo"></div>
-            <ul class="menu">
-                <li class="menu-item">홈</li>
-                <li class="menu-item">학부 연혁</li>
-                <li class="menu-item">학부 갤러리</li>
-            </ul>
-            <label for="sidebar-check" class="sidebar-on-btn">
-                <span>메뉴</span>
-            </label>
-        </nav>
-    </div>
-</header>
-<input type="checkbox" hidden class="sidebar-check" id="sidebar-check"/>
-<aside class="sidebar">
-    <label class="sidebar-off-btn" for="sidebar-check"></label>
-    <ul>
-        <li class="sidebar-item">홈</li>
-        <li class="sidebar-item">학부 연혁</li>
-        <li class="sidebar-item">학부 갤러리</li>
-    </ul>
-</aside>
+<jsp:include page="include/header.jsp" />
 <main>
     <div class="container">
         <section class="banner">
@@ -292,9 +269,7 @@
         </div>
     </section>
 </main>
-<footer class="footer"><span>© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW"
-                                                                                    target="_blank">CEL</a></span>
-</footer>
+<jsp:include page="include/footer.jsp"/>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
