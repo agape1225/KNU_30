@@ -79,6 +79,8 @@ public class CelebrateController {
 
                 mailSender.send(preparator);
 
+                return "bug";
+
             }else {
 
                 cDto.getAuthor().replaceAll("(?i)<script", "&lt;script");
@@ -93,9 +95,11 @@ public class CelebrateController {
                 celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
                         utility.getToday(), Integer.toString(cDto.getId()));
 
+                return "true";
+
             }
 
-            return "true";
+
 
         }catch (Exception e){
 
