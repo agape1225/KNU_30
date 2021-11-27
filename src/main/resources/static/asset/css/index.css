@@ -251,6 +251,7 @@ button {
 
     transition: .25s;
     overflow: hidden;
+    z-index: 1;
 }
 
 .cta-club {

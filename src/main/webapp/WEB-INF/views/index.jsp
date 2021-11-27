@@ -24,10 +24,10 @@
                     진심으로 축하합니다.
                 </h1>
                 <span class="banner-subtitle">
-                    졸업생들을 위한 축하 글과 학과 이벤트에 참여해
+                    학부를 위한 응원 글과 학과 퀴즈 이벤트에 참여해
                     소정의 상품도 받아가세요!
                 </span>
-                <div class="cta">
+                <div class="cta event-move-btn">
                     <span>더보기</span>
                 </div>
             </div>
@@ -197,7 +197,7 @@
         <div class="container d-flex flex-column align-items-center">
             <div class="section-header">
                 <h1 class="underline underline-dark">Congratulations</h1>
-                <span class="section-title">선배님 졸업을 축하합니다!</span>
+                <span class="section-title">30주년을 축하드립니다!</span>
             </div>
             <div class="row celebration-card-list">
                 <c:forEach var="name" items="${comment_list}" varStatus="status">
@@ -222,9 +222,15 @@
             <div class="row">
                 <div class="section-header left col-lg-6 col-12">
                     <h1 class="underline underline-dark">Comment</h1>
-                    <span class="section-title">졸업생에게 축하글 남기기</span>
+                    <span class="section-title">학부를 위한 응원 글</span>
                     <span class="section-description">
-                        졸업생에게 축하글을 남기면, '학부 퀴즈 맞추기 이벤트'에 자동으로 응모됩니다.
+                        응원글을 남기면, '응원글 이벤트'에 자동으로 응모됩니다.
+                        당첨자는 입력해주신 휴대폰 번호로 연락드립니다.
+                        <br />
+                        <br />
+                        이벤트 기간: 00월 00일 ~ 00월 00일 <br />
+                        이벤트 상품: 10만원 상당의 키보드 혹은 마우스 <br />
+                        당첨자 인원: 2명 <br />
                     </span>
                 </div>
                 <div class="col-lg-6 col-12">

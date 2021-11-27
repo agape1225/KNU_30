@@ -176,6 +176,11 @@
         // doneClubDrag();
     })
 
+    // TODO scroll move to event
+    document.querySelector('.event-move-btn').addEventListener('click', () => {
+        document.querySelector('.comment').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+
     // TODO get celebration
     document.querySelector('.celebration-more-btn').addEventListener('click', () => {
         $.ajax({

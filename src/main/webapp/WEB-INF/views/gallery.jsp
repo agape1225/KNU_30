@@ -22,7 +22,7 @@
         <section class="sub-banner">
             <div class="banner-content">
                 <h1 class="banner-title">
-                    학부 겔러리
+                    학부 갤러리
                 </h1>
             </div>
             <div class="banner-img gallery"></div>
