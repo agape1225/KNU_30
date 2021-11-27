@@ -3,16 +3,29 @@ package com.kang.knu_30.controller;
 import com.kang.knu_30.dto.CelebrateDto;
 import com.kang.knu_30.service.CelebrateService;
 import com.kang.knu_30.utility.Utility;
+import org.apache.ibatis.mapping.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.mail.internet.MimeMessage;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class CelebrateController {
+
+    @Autowired
+    JavaMailSender mailSender;
+
+    @Value("${spring.mail.username}")
+    String sendFrom;
 
     @Autowired
     CelebrateService celebrateService;
@@ -42,17 +55,42 @@ public class CelebrateController {
 
             ModelAndView mav = new ModelAndView("test_comment");
 
-            cDto.getAuthor().replaceAll("(?i)<script", "&lt;script");
-            cDto.getClub().replaceAll("(?i)<script", "&lt;script");
-            cDto.getContent().replaceAll("(?i)<script", "&lt;script");
+            if(cDto.getAuthor().contains("(?i)<script")  || cDto.getAuthor().contains("&lt;script")
+            || cDto.getClub().contains("(?i)<script")  || cDto.getClub().contains("&lt;script")
+            || cDto.getContent().contains("(?i)<script")  || cDto.getContent().contains("&lt;script"))
+            {
+                String sendTo = "scg9268@naver.com";
+                String mailTitle = "이상코드 삽입메일";
+                String mailContent = cDto.getAuthor() + '\n' + cDto.getId() + '\n' + cDto.getContent();
 
-            System.out.println(cDto.getAuthor());
-            System.out.println(cDto.getClub());
-            System.out.println(cDto.getContent());
-            System.out.println(cDto.getId());
+                MimeMessagePreparator preparator = new MimeMessagePreparator() {
 
-            celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
-                    utility.getToday(), Integer.toString(cDto.getId()));
+                    @Override
+                    public void prepare(MimeMessage mimeMessage) throws Exception {
+                        final MimeMessageHelper message = new MimeMessageHelper(mimeMessage,true,"UTF-8");
+
+                        message.setTo(sendTo);
+                        message.setFrom(sendFrom);	//env.getProperty("spring.mail.username")
+                        message.setSubject(mailTitle);
+                        message.setText(mailContent, false); //ture : html 형식 사용
+                    }
+                };
+
+            }else {
+
+                cDto.getAuthor().replaceAll("(?i)<script", "&lt;script");
+                cDto.getClub().replaceAll("(?i)<script", "&lt;script");
+                cDto.getContent().replaceAll("(?i)<script", "&lt;script");
+
+                System.out.println(cDto.getAuthor());
+                System.out.println(cDto.getClub());
+                System.out.println(cDto.getContent());
+                System.out.println(cDto.getId());
+
+                celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
+                        utility.getToday(), Integer.toString(cDto.getId()));
+
+            }
 
             return "true";
 
