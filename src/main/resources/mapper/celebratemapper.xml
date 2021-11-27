@@ -21,7 +21,7 @@
 
     <select id="get_celebrate_with_num" resultType="CelebrateDto_DB">
         select * from celebrate
-        limit #{start_num}, 9;
+        limit #{start_num}, 6;
     </select>
 
 
