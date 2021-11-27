@@ -446,19 +446,23 @@ button {
 }
 
 .introduce-card-1 .card .card-img {
-    background-image: url("/asset/img/test1.jpg");
+    /*background-image: url("/asset/img/test1.jpg");*/
+    background-image: url("/asset/img/card/greeting.png");
 }
 
 .introduce-card-2 .card .card-img {
-    background-image: url("/asset/img/test2.jpg");
+    /*background-image: url("/asset/img/test2.jpg");*/
+    background-image: url("/asset/img/card/30_celebration.png");
 }
 
 .introduce-card-3 .card .card-img {
-    background-image: url("/asset/img/test3.jpg");
+    /*background-image: url("/asset/img/test3.jpg");*/
+    background-image: url("/asset/img/card/lecture.png");
 }
 
 .introduce-card-4 .card .card-img {
-    background-image: url("/asset/img/test4.jpg");
+    /*background-image: url("/asset/img/test4.jpg");*/
+    background-image: url("/asset/img/card/work.png");
 }
 
 .card-img {

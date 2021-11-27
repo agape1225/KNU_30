@@ -201,10 +201,10 @@
                 <c:forEach var="name" items="${comment_list}" varStatus="status">
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="card celebration-card">
-                            <div class="card-name"><c:out value="${name.author}" /> </div>
-                            <div class="card-sub"><c:out value="${name.id}" /> / <c:out value="${name.club}" /></div>
+                            <div class="card-name"><c:out value="${name.author}"  escapeXml="false" /> </div>
+                            <div class="card-sub"><c:out value="${name.id}"  escapeXml="false" /> / <c:out value="${name.club}"  escapeXml="false" /></div>
                             <span class="card-description">
-                                <c:out value="${name.content}" />
+                                <c:out value="${name.content}"  escapeXml="false" />
                             </span>
                         </div>
                     </div>
@@ -235,8 +235,12 @@
                             <input type="number" name="id" id="id_input" class="form-controller" placeholder="학번"
                                    required/>
                         </div>
-                        <div class="form-group col-12">
+                        <div class="form-group col-12 col-sm-6">
                             <input type="text" name="club" id="club_input" class="form-controller" placeholder="동아리"
+                                   required/>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <input type="text" name="phone" id="phone_input" class="form-controller" placeholder="휴대전화(이벤트 참여용)"
                                    required/>
                         </div>
                         <div class="form-group col-12">

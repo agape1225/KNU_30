@@ -137,6 +137,7 @@
         document.querySelector('#club_input').value = "";
         document.querySelector('#content_input').value = "";
         document.querySelector('#id_input').value = "";
+        document.querySelector('#phone_input').value = "";
     }
 
     // TODO LOAD
@@ -187,22 +188,20 @@
             success : function(data) {
                 // success
                 console.log('success');
-                console.log(data);
 
                 let celebration_card_list = ``;
                 for(let i = 0; i < data.length; i++) {
                     let celebration_info = data[i];
-
                     let celebration_card = `
                        <div class="col-lg-4 col-sm-6 col-12">
-                        <div class="card celebration-card">
-                            <div class="card-name"><c:out value="${celebration_info.author}" /> </div>
-                            <div class="card-sub"><c:out value="${celebration_info.id}" /> / <c:out value="${celebration_info.club}" /></div>
-                            <span class="card-description">
-                                <c:out value="${celebration_info.content}" />
-                            </span>
+                            <div class="card celebration-card">
+                                <div class="card-name">${celebration_info.author}</div>
+                                <div class="card-sub">${celebration_info.id} / ${celebration_info.club}</div>
+                                <span class="card-description">
+                                    ${celebration_info.content}"
+                                </span>
+                            </div> 
                         </div>
-                    </div>
                     `;
 
                     celebration_card_list += celebration_card;
