@@ -90,23 +90,23 @@
         <section class="club">
             <div class="section-header">
                 <h1 class="underline">CLUB</h1>
-                <span class="section-title">SW응용학부의 <strong class="underline">7가지</strong> 동아리</span>
+                <span class="section-title">SW응용학부의 <strong class="underline">6가지</strong> 동아리와 학생회</span>
             </div>
             <div class="section-content club-content ani-in">
                 <div class="club-card-list row" style="transform: translateX(0)">
                     <div class="offset-xl-4 offset-md-3 offset-1"></div>
                     <div class="col-xl-4 col-md-6 col-10" id="CEL" data-index="0">
-                        <div class="card club-card active">
+                        <div class="card club-card active" onclick="location.href='/detail?name=cell'">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
-                                <h1 class="card-title">CEL</h1>
+                                <h1 class="card-title">CELL</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="KIS" data-index="1">
-                        <div class="card club-card">
+                        <div class="card club-card" onclick="location.href='/detail?name=kis'">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
@@ -115,18 +115,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="MAC" data-index="2">
-                        <div class="card club-card">
-                            <div class="card-img"></div>
-                            <div class="card-img-filter"></div>
-                            <div class="card-info">
-                                <h1 class="card-title">MAC</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="CAVE" data-index="3">
-                        <div class="card club-card">
+                    <div class="col-xl-4 col-md-6 col-10" id="CAVE" data-index="2">
+                        <div class="card club-card" onclick="location.href='/detail?name=cave'">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
@@ -135,8 +125,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="NET" data-index="4">
-                        <div class="card club-card">
+                    <div class="col-xl-4 col-md-6 col-10" id="NET" data-index="3">
+                        <div class="card club-card" onclick="location.href='/detail?name=netapp'">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
@@ -145,8 +135,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="MOUSE" data-index="5">
-                        <div class="card club-card">
+                    <div class="col-xl-4 col-md-6 col-10" id="MOUSE" data-index="4">
+                        <div class="card club-card" onclick="location.href='/detail?name=maws'">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
@@ -155,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="AUNE" data-index="6">
+                    <div class="col-xl-4 col-md-6 col-10" id="AUNE" data-index="5" onclick="location.href='/detail?name=aune'">
                         <div class="card club-card">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
@@ -171,11 +161,10 @@
                 <ul class="club-state-list">
                     <li class="club-state-item start-club-state-item active" data-id="CEL" data-index="0"></li>
                     <li class="club-state-item" data-id="KIS" data-index="1"></li>
-                    <li class="club-state-item" data-id="MAC" data-index="2"></li>
-                    <li class="club-state-item" data-id="CAVE" data-index="3"></li>
-                    <li class="club-state-item" data-id="NET" data-index="4"></li>
-                    <li class="club-state-item" data-id="MOUSE" data-index="5"></li>
-                    <li class="club-state-item" data-id="AUNE" data-index="6"></li>
+                    <li class="club-state-item" data-id="CAVE" data-index="2"></li>
+                    <li class="club-state-item" data-id="NET" data-index="3"></li>
+                    <li class="club-state-item" data-id="MOUSE" data-index="4"></li>
+                    <li class="club-state-item" data-id="AUNE" data-index="5"></li>
                 </ul>
             </div>
         </section>

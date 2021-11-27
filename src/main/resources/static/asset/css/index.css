@@ -179,6 +179,10 @@ ul {
     background-image: url("/asset/img/gallery-banner.png");
 }
 
+.banner-img.detail {
+    background-image: url("/asset/img/club-banner.png");
+}
+
 .banner-background {
     position: absolute;
     top: 0;
