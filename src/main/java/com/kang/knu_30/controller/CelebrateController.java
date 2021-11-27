@@ -55,9 +55,9 @@ public class CelebrateController {
 
             ModelAndView mav = new ModelAndView("test_comment");
 
-            if(cDto.getAuthor().contains("script")  || cDto.getAuthor().contains("script")
-            || cDto.getClub().contains("script")  || cDto.getClub().contains("script")
-            || cDto.getContent().contains("script")  || cDto.getContent().contains("script"))
+            if(cDto.getAuthor().contains("script")
+            || cDto.getClub().contains("script")
+            || cDto.getContent().contains("script"))
             {
                 System.out.println("이상 감지 실행");
                 String sendTo = "scg9268@naver.com";
