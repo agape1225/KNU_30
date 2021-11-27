@@ -42,6 +42,10 @@ public class CelebrateController {
 
             ModelAndView mav = new ModelAndView("test_comment");
 
+            cDto.getAuthor().replaceAll("(?i)<script", "&lt;script");
+            cDto.getClub().replaceAll("(?i)<script", "&lt;script");
+            cDto.getContent().replaceAll("(?i)<script", "&lt;script");
+
             System.out.println(cDto.getAuthor());
             System.out.println(cDto.getClub());
             System.out.println(cDto.getContent());
