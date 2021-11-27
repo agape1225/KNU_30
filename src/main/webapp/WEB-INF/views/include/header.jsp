@@ -9,7 +9,7 @@
 <header class="header">
     <div class="container">
         <nav>
-            <div class="logo"></div>
+            <div class="logo" onclick="location.href ='/'"></div>
             <ul class="menu">
                 <li class="menu-item" onclick="location.href ='/'">홈</li>
                 <li class="menu-item" onclick="location.href = '/history'">학부 연혁</li>

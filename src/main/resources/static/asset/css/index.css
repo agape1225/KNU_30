@@ -19,6 +19,16 @@ ul {
     padding: 0;
 }
 
+pre {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+button {
+    background: none;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -36,6 +46,7 @@ ul {
 
 .logo {
     background-image: url("/asset/img/white-logo.svg");
+    cursor: pointer;
 }
 
 .menu, .sidebar-on-btn {
@@ -236,6 +247,12 @@ ul {
 
     transition: .25s;
     overflow: hidden;
+}
+
+.cta-club {
+    width: 116px;
+    height: 42px;
+    margin-top: 20px;
 }
 
 .cta:before, .sidebar-on-btn:before {
@@ -664,6 +681,15 @@ textarea.form-controller {
     width: 100%;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.youtube {
+    width: 100%;
+    height: 56.25vw;
+}
+
+.youtube-section {
+    margin: 100px 0;
 }
 
 @media (min-width: 360px) {

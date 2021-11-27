@@ -33,10 +33,10 @@
             <div class="banner-img detail"></div>
             <div class="banner-background"></div>
         </section>
-        <div class="youtube"></div>
-        <pre>
-            ${content}
-        </pre>
+        <section class="youtube-section">
+            <div id="player" class="youtube"></div>
+            <pre>${content}</pre>
+        </section>
     </div>
 </main>
 <jsp:include page="include/footer.jsp"/>
@@ -44,5 +44,6 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
 <script src="/bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+<script src="asset/js/youtube.js"></script>
 </body>
 </html>

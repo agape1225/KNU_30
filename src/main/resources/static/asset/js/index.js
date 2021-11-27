@@ -3,6 +3,7 @@
     let club_state_item_active_element = document.querySelector('.start-club-state-item');
     let club_card_active_element = document.querySelector('#CEL').children[0];
     let club_card_index = 0;
+    let club_card_max_index = 6;
     let club_drag = false;
     let club_drag_start_coordinate_x = 0;
     let club_drag_origin_translateX = 0;
@@ -57,7 +58,7 @@
     const rotateClubCard = () => {
         if (!club_drag) {
             club_card_index++;
-            club_card_index %= 7;
+            club_card_index %= club_card_max_index;
             const club_state_item = document.querySelectorAll('.club-state-item')[club_card_index];
             setClubCard(club_state_item);
         }
@@ -122,8 +123,8 @@
         let index = Math.floor(-(club_drag_origin_translateX + Math.floor(club_drag_distance / card_width) * card_width) / card_width);
         if (index < 0)
             index = 0;
-        if (index > 6)
-            index = 6;
+        if (index > club_card_max_index - 1)
+            index = 5;
 
         console.log("card_width: " + card_width);
         console.log("index: " + index);
@@ -163,5 +164,26 @@
         // 약간 에러있음
         // console.log('leave');
         // doneClubDrag();
+    })
+
+    // TODO comment
+    document.querySelector('.comment-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let formData = $(".comment-form").serialize();
+
+        $.ajax({
+            cache : false,
+            url : "/submit_selebrate", // 요기에
+            type : 'POST',
+            data : formData,
+            success : function(data) {
+                console.log('성공');
+            }, // success
+            error : function(data) {
+                // error
+                console.log('실패')
+            }
+        }); // $.ajax */
     })
 })()

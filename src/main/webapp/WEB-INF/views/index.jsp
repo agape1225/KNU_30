@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/asset/css/index.css" type="text/css"/>
     <title>SW응용학부 30주년</title></head>
 <body>
-<jsp:include page="include/header.jsp" />
+<jsp:include page="include/header.jsp"/>
 <main>
     <div class="container">
         <section class="banner">
@@ -96,62 +96,80 @@
                 <div class="club-card-list row" style="transform: translateX(0)">
                     <div class="offset-xl-4 offset-md-3 offset-1"></div>
                     <div class="col-xl-4 col-md-6 col-10" id="CEL" data-index="0">
-                        <div class="card club-card active" onclick="location.href='/detail?name=cell'">
-                            <div class="card-img"></div>
+                        <div class="card club-card active">
+                            <div class="card-img cell" style="background-image: url('asset/img/club/cell.png')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">CELL</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=cell'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="KIS" data-index="1">
-                        <div class="card club-card" onclick="location.href='/detail?name=kis'">
-                            <div class="card-img"></div>
+                        <div class="card club-card">
+                            <div class="card-img" style="background-image: url('asset/img/club/kis.png')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">KIS</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=kis'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="CAVE" data-index="2">
-                        <div class="card club-card" onclick="location.href='/detail?name=cave'">
-                            <div class="card-img"></div>
+                        <div class="card club-card">
+                            <div class="card-img" style="background-image: url('asset/img/club/cave.png')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">CAVE</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=cave'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="NET" data-index="3">
-                        <div class="card club-card" onclick="location.href='/detail?name=netapp'">
-                            <div class="card-img"></div>
+                        <div class="card club-card">
+                            <div class="card-img" style="background-image: url('asset/img/club/netapp.jpg')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">넷앱</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=netapp'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="MOUSE" data-index="4">
-                        <div class="card club-card" onclick="location.href='/detail?name=maws'">
-                            <div class="card-img"></div>
+                        <div class="card club-card">
+                            <div class="card-img" style="background-image: url('asset/img/club/maws.jpg')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">마우스</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=maws'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-10" id="AUNE" data-index="5" onclick="location.href='/detail?name=aune'">
+                    <div class="col-xl-4 col-md-6 col-10" id="AUNE" data-index="5">
                         <div class="card club-card">
-                            <div class="card-img"></div>
+                            <div class="card-img" style="background-image: url('asset/img/club/aunae.jpg')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">아우내</h1>
                                 <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <div class="cta-club cta" onclick="location.href='/detail?name=aune'">
+                                    <span>둘러보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -233,24 +251,24 @@
                     </span>
                 </div>
                 <div class="col-lg-6 col-12">
-                    <form action="#" class="comment-form row">
+                    <form class="comment-form row">
                         <div class="form-group col-12 col-sm-6">
-                            <input type="text" class="form-controller" placeholder="이름"/>
+                            <input type="text" name="author" class="form-controller" placeholder="이름" required/>
                         </div>
                         <div class="form-group col-12 col-sm-6">
-                            <input type="text" class="form-controller" placeholder="학번"/>
+                            <input type="number" name="id" class="form-controller" placeholder="학번" required/>
                         </div>
                         <div class="form-group col-12">
-                            <input type="text" class="form-controller" placeholder="학과"/>
+                            <input type="text" name="club" class="form-controller" placeholder="동아리" required/>
                         </div>
                         <div class="form-group col-12">
-                            <textarea name="" id="" cols="30" rows="10" class="form-controller"
+                            <textarea name="content" cols="30" rows="10" class="form-controller" required
                                       placeholder="축하 메세지"></textarea>
                         </div>
                         <div class="col-12">
-                            <div class="cta-black">
+                            <button class="cta-black form-btn">
                                 <span>글쓰기</span>
-                            </div>
+                            </button>
                         </div>
                     </form>
                 </div>
