@@ -3,10 +3,12 @@
     let club_state_item_active_element = document.querySelector('.start-club-state-item');
     let club_card_active_element = document.querySelector('#CEL').children[0];
     let club_card_index = 0;
+    let club_card_max_index = 6;
     let club_drag = false;
     let club_drag_start_coordinate_x = 0;
     let club_drag_origin_translateX = 0;
     let club_drag_distance = 0;
+    let index = 6;
 
     const sceneInfo = [
         {
@@ -57,7 +59,7 @@
     const rotateClubCard = () => {
         if (!club_drag) {
             club_card_index++;
-            club_card_index %= 7;
+            club_card_index %= club_card_max_index;
             const club_state_item = document.querySelectorAll('.club-state-item')[club_card_index];
             setClubCard(club_state_item);
         }
@@ -122,12 +124,20 @@
         let index = Math.floor(-(club_drag_origin_translateX + Math.floor(club_drag_distance / card_width) * card_width) / card_width);
         if (index < 0)
             index = 0;
-        if (index > 6)
-            index = 6;
+        if (index > club_card_max_index - 1)
+            index = 5;
 
         console.log("card_width: " + card_width);
         console.log("index: " + index);
         setClubCard(card_state_items[index]);
+    }
+
+    const inputReset = () => {
+        document.querySelector('#author_input').value = "";
+        document.querySelector('#club_input').value = "";
+        document.querySelector('#content_input').value = "";
+        document.querySelector('#id_input').value = "";
+        document.querySelector('#phone_input').value = "";
     }
 
     // TODO LOAD
@@ -159,9 +169,111 @@
     document.querySelector('.club-card-list').addEventListener('mouseup', () => {
         doneClubDrag();
     })
+
     document.querySelector('.club-card-list').addEventListener('mouseleave', () => {
         // 약간 에러있음
         // console.log('leave');
         // doneClubDrag();
+    })
+
+    // TODO scroll move to event
+    document.querySelector('.event-move-btn').addEventListener('click', () => {
+        document.querySelector('.comment').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+
+    // TODO get celebration
+    document.querySelector('.celebration-more-btn').addEventListener('click', () => {
+        $.ajax({
+            cache : false,
+            url : "/get_celebration", // 요기에
+            type : 'POST',
+            data : {
+                index: index
+            },
+            success : function(data) {
+                // success
+                console.log('success');
+
+                let celebration_card_list = ``;
+                for(let i = 0; i < data.length; i++) {
+                    let celebration_info = data[i];
+                    let celebration_card = `
+                       <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="card celebration-card">
+                                <div class="card-name">${celebration_info.author}</div>
+                                <div class="card-sub">${celebration_info.id} / ${celebration_info.club}</div>
+                                <span class="card-description">
+                                    ${celebration_info.content}"
+                                </span>
+                            </div> 
+                        </div>
+                    `;
+
+                    celebration_card_list += celebration_card;
+                }
+
+                document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', celebration_card_list );
+                index += 6;
+            },
+            error : function(data) {
+                // error
+                alert('실패했습니다.');
+            }
+        }); // $.ajax */
+    })
+
+    // TODO comment
+    document.querySelector('.comment-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let formData = $(".comment-form").serialize();
+
+        let author = document.querySelector('#author_input').value;
+        let club = document.querySelector('#club_input').value;
+        let content = document.querySelector('#content_input').value;
+        let id = document.querySelector('#id_input').value;
+
+        let form_btn = document.querySelector('.form-btn');
+        form_btn.disabled = true;
+        form_btn.innerHTML = `<span> 전송중.. </span>`;
+
+        $.ajax({
+            cache : false,
+            url : "/submit_celebrate", // 요기에
+            type : 'POST',
+            data : formData,
+            success : function(data) {
+                if(data === "bug") {
+                    // bug
+                    alert("왜 그러시나요...");
+                } else {
+                    //success
+                    let html = `
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card celebration-card current">
+                            <div class="card-name">${author}</div>
+                            <div class="card-sub">${id} / ${club}</div>
+                            <span class="card-description">
+                                ${content}
+                            </span>
+                        </div>
+                    </div>
+                    `;
+
+                    // document.querySelector('.celebration-card-list').innerHTML = html;
+                    document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', html );
+                    document.querySelector('.card.current').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            },
+            error : function(data) {
+                // error
+                alert('실패했습니다.');
+            },
+            complete: function() {
+                inputReset();
+                document.querySelector('.form-btn').disabled = false;
+                form_btn.innerHTML = `<span>글쓰기</span>`;
+            }
+        }); // $.ajax */
     })
 })()

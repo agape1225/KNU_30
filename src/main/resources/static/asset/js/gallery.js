@@ -20,8 +20,8 @@
         }
     }
 
+    // TODO get Gallery
     document.querySelector('#getGalleryBtn').addEventListener("click", () => {
-        console.log('hi');
         setGallery();
     })
 
