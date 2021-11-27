@@ -31,9 +31,11 @@
                     <span>더보기</span>
                 </div>
             </div>
-            <div class="banner-video">
-                <canvas class="video"></canvas>
-            </div>
+            <div class="banner-img school"></div>
+            <div class="banner-background"></div>
+<%--            <div class="banner-video">--%>
+<%--                <canvas class="video"></canvas>--%>
+<%--            </div>--%>
             <div id="particles-dots" class="particles">
                 <!--        CANVAS        -->
             </div>
@@ -101,7 +103,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">CELL</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">웹 개발을 전문적으로 하는 웹 개발 동아리 CELL 입니다.</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=cell'">
                                     <span>둘러보기</span>
                                 </div>
@@ -114,7 +116,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">KIS</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">정보보호만이 아닌 웹, 앱과 같은 다양한 분야를 공부하고 싶다면 케아스로오세요!</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=kis'">
                                     <span>둘러보기</span>
                                 </div>
@@ -127,7 +129,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">CAVE</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">강남대학교 동아리 케이브입니다.</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=cave'">
                                     <span>둘러보기</span>
                                 </div>
@@ -140,7 +142,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">넷앱</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">Network와 Application에 흥미가 있는 학생들이 모여 만든 학술 동아리입니다.</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=netapp'">
                                     <span>둘러보기</span>
                                 </div>
@@ -153,7 +155,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">마우스</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">안녕하세요, 동아리 마우스입니다.</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=maws'">
                                     <span>둘러보기</span>
                                 </div>
@@ -166,7 +168,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">아우내</h1>
-                                <span class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                                <span class="card-description">아우내란 뜻은 "여러 사람들이 모여 하나의 뜻으로 합쳐지다"란 뜻을 가지고 있으며 학술과 친목을 위주로 하고 가족같은 분위기의 동아리입니다.</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=aune'">
                                     <span>둘러보기</span>
                                 </div>

@@ -182,6 +182,10 @@ button {
     background-color: rgba(0,0,0,0.52);
 }
 
+.banner-img.school {
+    background-image: url("/asset/img/school-banner.jpg");
+}
+
 .banner-img.history {
     background-image: url("/asset/img/history-banner.png");
 }
@@ -701,7 +705,7 @@ textarea.form-controller {
         height: 88px;
     }
 
-    .banner, .banner-video, .sub-banner, .banner-img, .banner-background {
+    .banner, .banner-video, .sub-banner, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 522px;
     }
@@ -754,9 +758,14 @@ textarea.form-controller {
         height: 146px;
     }
 
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 100vw;
+    }
+
+    .sub-banner .banner-img, .sub-banner .banner-background {
+        width: 100%;
+        height: 522px;
     }
 
     .logo {
@@ -807,7 +816,7 @@ textarea.form-controller {
     }
 
 
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 61.8333vw;
     }
@@ -861,7 +870,7 @@ textarea.form-controller {
 }
 
 @media (min-width: 1320px) {
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 56.25vw;
     }
