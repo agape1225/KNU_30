@@ -55,10 +55,11 @@ public class CelebrateController {
 
             ModelAndView mav = new ModelAndView("test_comment");
 
-            if(cDto.getAuthor().contains("(?i)<script")  || cDto.getAuthor().contains("&lt;script")
-            || cDto.getClub().contains("(?i)<script")  || cDto.getClub().contains("&lt;script")
-            || cDto.getContent().contains("(?i)<script")  || cDto.getContent().contains("&lt;script"))
+            if(cDto.getAuthor().contains("script")  || cDto.getAuthor().contains("script")
+            || cDto.getClub().contains("script")  || cDto.getClub().contains("script")
+            || cDto.getContent().contains("script")  || cDto.getContent().contains("script"))
             {
+                System.out.println("이상 감지 실행");
                 String sendTo = "scg9268@naver.com";
                 String mailTitle = "이상코드 삽입메일";
                 String mailContent = cDto.getAuthor() + '\n' + cDto.getId() + '\n' + cDto.getContent();
@@ -75,6 +76,8 @@ public class CelebrateController {
                         message.setText(mailContent, false); //ture : html 형식 사용
                     }
                 };
+
+                mailSender.send(preparator);
 
             }else {
 
