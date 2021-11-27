@@ -198,44 +198,19 @@
                 <span class="section-title">선배님 졸업을 축하합니다!</span>
             </div>
             <div class="row celebration-card-list">
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="card celebration-card">
-                        <div class="card-name">홍길동</div>
-                        <div class="card-sub">201904063 / ICT 공학부</div>
-                        <span class="card-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
-                    </span>
+                <c:forEach var="name" items="${comment_list}" varStatus="status">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card celebration-card">
+                            <div class="card-name"><c:out value="${name.author}" /> </div>
+                            <div class="card-sub"><c:out value="${name.id}" /> / <c:out value="${name.club}" /></div>
+                            <span class="card-description">
+                                <c:out value="${name.content}" />
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="card celebration-card">
-                        <div class="card-name">홍길동</div>
-                        <div class="card-sub">201904063 / ICT 공학부</div>
-                        <span class="card-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
-                    </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="card celebration-card">
-                        <div class="card-name">홍길동</div>
-                        <div class="card-sub">201904063 / ICT 공학부</div>
-                        <span class="card-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
-                    </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="card celebration-card">
-                        <div class="card-name">홍길동</div>
-                        <div class="card-sub">201904063 / ICT 공학부</div>
-                        <span class="card-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt ducimus error est harum, illum labore molestias optio possimus praesentium qui quos sequi totam vel volu
-                    </span>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
-            <div class="cta-black">
+            <div class="cta-black celebration-more-btn">
                 <span>더보기</span>
             </div>
         </div>
@@ -253,16 +228,20 @@
                 <div class="col-lg-6 col-12">
                     <form class="comment-form row">
                         <div class="form-group col-12 col-sm-6">
-                            <input type="text" name="author" class="form-controller" placeholder="이름" required/>
+                            <input type="text" name="author" id="author_input" class="form-controller" placeholder="이름"
+                                   required/>
                         </div>
                         <div class="form-group col-12 col-sm-6">
-                            <input type="number" name="id" class="form-controller" placeholder="학번" required/>
+                            <input type="number" name="id" id="id_input" class="form-controller" placeholder="학번"
+                                   required/>
                         </div>
                         <div class="form-group col-12">
-                            <input type="text" name="club" class="form-controller" placeholder="동아리" required/>
+                            <input type="text" name="club" id="club_input" class="form-controller" placeholder="동아리"
+                                   required/>
                         </div>
                         <div class="form-group col-12">
-                            <textarea name="content" cols="30" rows="10" class="form-controller" required
+                            <textarea name="content" cols="30" id="content_input" rows="10" class="form-controller"
+                                      required
                                       placeholder="축하 메세지"></textarea>
                         </div>
                         <div class="col-12">
@@ -277,10 +256,8 @@
     </section>
 </main>
 <jsp:include page="include/footer.jsp"/>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="/bootstrap-4.6.1-dist/js/bootstrap.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="/bootstrap-4.6.1-dist/js/bootstrap.js"></script>
 <script src="/asset/js/index.js"></script>
 <script src="/asset/js/particles.js"></script>
 <script src="/asset/js/particles-dots.js"></script>

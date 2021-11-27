@@ -8,6 +8,7 @@
     let club_drag_start_coordinate_x = 0;
     let club_drag_origin_translateX = 0;
     let club_drag_distance = 0;
+    let index = 6;
 
     const sceneInfo = [
         {
@@ -131,6 +132,13 @@
         setClubCard(card_state_items[index]);
     }
 
+    const inputReset = () => {
+        document.querySelector('#author_input').value = "";
+        document.querySelector('#club_input').value = "";
+        document.querySelector('#content_input').value = "";
+        document.querySelector('#id_input').value = "";
+    }
+
     // TODO LOAD
     window.addEventListener('load', () => {
         setLayout();
@@ -160,10 +168,54 @@
     document.querySelector('.club-card-list').addEventListener('mouseup', () => {
         doneClubDrag();
     })
+
     document.querySelector('.club-card-list').addEventListener('mouseleave', () => {
         // 약간 에러있음
         // console.log('leave');
         // doneClubDrag();
+    })
+
+    // TODO get celebration
+    document.querySelector('.celebration-more-btn').addEventListener('click', () => {
+        $.ajax({
+            cache : false,
+            url : "/get_celebration", // 요기에
+            type : 'POST',
+            data : {
+                index: index
+            },
+            success : function(data) {
+                // success
+                console.log('success');
+                console.log(data);
+
+                let celebration_card_list = ``;
+                for(let i = 0; i < data.length; i++) {
+                    let celebration_info = data[i];
+
+                    let celebration_card = `
+                       <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card celebration-card">
+                            <div class="card-name"><c:out value="${celebration_info.author}" /> </div>
+                            <div class="card-sub"><c:out value="${celebration_info.id}" /> / <c:out value="${celebration_info.club}" /></div>
+                            <span class="card-description">
+                                <c:out value="${celebration_info.content}" />
+                            </span>
+                        </div>
+                    </div>
+                    `;
+
+                    celebration_card_list += celebration_card;
+                }
+
+                document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', celebration_card_list );
+                index += 6;
+            },
+            error : function(data) {
+                // error
+                alert('실패했습니다.');
+            }
+        }); // $.ajax */
     })
 
     // TODO comment
@@ -172,17 +224,41 @@
 
         let formData = $(".comment-form").serialize();
 
+        let author = document.querySelector('#author_input').value;
+        let club = document.querySelector('#club_input').value;
+        let content = document.querySelector('#content_input').value;
+        let id = document.querySelector('#id_input').value;
+
         $.ajax({
             cache : false,
-            url : "/submit_selebrate", // 요기에
+            url : "/submit_celebrate", // 요기에
             type : 'POST',
             data : formData,
             success : function(data) {
-                console.log('성공');
-            }, // success
+                // success
+                alert('성공적으로 등록되었습니다.');
+                let html = `
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="card celebration-card current">
+                        <div class="card-name">${author}</div>
+                        <div class="card-sub">${id} / ${club}</div>
+                        <span class="card-description">
+                            ${content}
+                        </span>
+                    </div>
+                </div>
+                `;
+
+                // document.querySelector('.celebration-card-list').innerHTML = html;
+                document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', html );
+                document.querySelector('.card.current').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            },
             error : function(data) {
                 // error
-                console.log('실패')
+                alert('실패했습니다.');
+            },
+            complete: function() {
+                inputReset();
             }
         }); // $.ajax */
     })
