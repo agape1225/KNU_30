@@ -19,6 +19,16 @@ ul {
     padding: 0;
 }
 
+pre {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+button {
+    background: none;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -36,6 +46,7 @@ ul {
 
 .logo {
     background-image: url("/asset/img/white-logo.svg");
+    cursor: pointer;
 }
 
 .menu, .sidebar-on-btn {
@@ -171,12 +182,20 @@ ul {
     background-color: rgba(0,0,0,0.52);
 }
 
+.banner-img.school {
+    background-image: url("/asset/img/school-banner.jpg");
+}
+
 .banner-img.history {
     background-image: url("/asset/img/history-banner.png");
 }
 
 .banner-img.gallery {
     background-image: url("/asset/img/gallery-banner.png");
+}
+
+.banner-img.detail {
+    background-image: url("/asset/img/club-banner.png");
 }
 
 .banner-background {
@@ -232,6 +251,13 @@ ul {
 
     transition: .25s;
     overflow: hidden;
+    z-index: 1;
+}
+
+.cta-club {
+    width: 116px;
+    height: 42px;
+    margin-top: 20px;
 }
 
 .cta:before, .sidebar-on-btn:before {
@@ -425,19 +451,23 @@ ul {
 }
 
 .introduce-card-1 .card .card-img {
-    background-image: url("/asset/img/test1.jpg");
+    /*background-image: url("/asset/img/test1.jpg");*/
+    background-image: url("/asset/img/card/greeting.png");
 }
 
 .introduce-card-2 .card .card-img {
-    background-image: url("/asset/img/test2.jpg");
+    /*background-image: url("/asset/img/test2.jpg");*/
+    background-image: url("/asset/img/card/30_celebration.png");
 }
 
 .introduce-card-3 .card .card-img {
-    background-image: url("/asset/img/test3.jpg");
+    /*background-image: url("/asset/img/test3.jpg");*/
+    background-image: url("/asset/img/card/lecture.png");
 }
 
 .introduce-card-4 .card .card-img {
-    background-image: url("/asset/img/test4.jpg");
+    /*background-image: url("/asset/img/test4.jpg");*/
+    background-image: url("/asset/img/card/work.png");
 }
 
 .card-img {
@@ -662,12 +692,21 @@ textarea.form-controller {
     margin-bottom: 20px;
 }
 
+.youtube {
+    width: 100%;
+    height: 56.25vw;
+}
+
+.youtube-section {
+    margin: 100px 0;
+}
+
 @media (min-width: 360px) {
     .header {
         height: 88px;
     }
 
-    .banner, .banner-video, .sub-banner, .banner-img, .banner-background {
+    .banner, .banner-video, .sub-banner, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 522px;
     }
@@ -720,9 +759,14 @@ textarea.form-controller {
         height: 146px;
     }
 
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 100vw;
+    }
+
+    .sub-banner .banner-img, .sub-banner .banner-background {
+        width: 100%;
+        height: 522px;
     }
 
     .logo {
@@ -773,7 +817,7 @@ textarea.form-controller {
     }
 
 
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 61.8333vw;
     }
@@ -827,7 +871,7 @@ textarea.form-controller {
 }
 
 @media (min-width: 1320px) {
-    .banner, .banner-video {
+    .banner, .banner-video, .banner-img, .banner-background, #particles-dots {
         width: 100%;
         height: 56.25vw;
     }
