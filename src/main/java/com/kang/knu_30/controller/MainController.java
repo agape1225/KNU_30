@@ -23,7 +23,7 @@ public class MainController {
     public ModelAndView main() throws Exception{
         System.out.println("controller find");
         ModelAndView mav = new ModelAndView("index");
-        mav.addObject("comment_list", celebrateService.get_celebrate_with_num(9));
+        mav.addObject("comment_list", celebrateService.get_celebrate_with_num(0));
 
 
 
