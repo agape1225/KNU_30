@@ -5,10 +5,7 @@ import com.kang.knu_30.service.CelebrateService;
 import com.kang.knu_30.utility.Utility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -36,19 +33,32 @@ public class CelebrateController {
         return mav;
     }
 
+
+    @ResponseBody
     @RequestMapping(value ="/submit_celebrate", method = RequestMethod.POST)
-    public ModelAndView submit_celebrate(CelebrateDto cDto) throws Exception{
-        ModelAndView mav = new ModelAndView("test_comment");
+    public String submit_celebrate(CelebrateDto cDto) throws Exception{
 
-        System.out.println(cDto.getAuthor());
-        System.out.println(cDto.getClub());
-        System.out.println(cDto.getContent());
-        System.out.println(cDto.getId());
+        try{
 
-        celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
-                utility.getToday(), Integer.toString(cDto.getId()));
+            ModelAndView mav = new ModelAndView("test_comment");
 
-        return mav;
+            System.out.println(cDto.getAuthor());
+            System.out.println(cDto.getClub());
+            System.out.println(cDto.getContent());
+            System.out.println(cDto.getId());
+
+            celebrateService.add_celebrate(cDto.getAuthor(), cDto.getClub(), cDto.getContent(),
+                    utility.getToday(), Integer.toString(cDto.getId()));
+
+            return "true";
+
+        }catch (Exception e){
+
+            return "false";
+
+        }
+
+
     }
 
 }
