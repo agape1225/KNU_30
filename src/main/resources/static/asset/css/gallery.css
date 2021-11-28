@@ -24,3 +24,25 @@
 .gallery-box img:hover {
     transform: scale(1.3);
 }
+
+@media (min-width: 360px) {
+    .gallery-box {
+        grid-template-columns: repeat(auto-fill, 330px);
+    }
+
+    .gallery-box img {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-box {
+        grid-template-columns: repeat(auto-fill, 360px);
+    }
+
+    .gallery-box img {
+        width: 360px;
+        height: 360px;
+    }
+}

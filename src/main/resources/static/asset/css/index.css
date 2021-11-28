@@ -122,7 +122,7 @@ button {
 }
 
 .sidebar {
-    display: block;
+    display: none;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -132,7 +132,7 @@ button {
     background-color: #C0AD9A;
     transform: translateX(100%);
     transition: transform .25s, visibility 0s .25s;;
-    z-index: 1;
+    z-index: 999;
     padding: 0 40px;
 }
 
