@@ -130,7 +130,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">CAVE</h1>
-                                <span class="card-description">강남대학교 동아리 케이브입니다.</span>
+                                <span class="card-description">학부 내 유일한 가상현실 동아리 CAVE입니다!</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=cave'">
                                     <span>둘러보기</span>
                                 </div>
@@ -169,7 +169,7 @@
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">아우내</h1>
-                                <span class="card-description">아우내란 뜻은 "여러 사람들이 모여 하나의 뜻으로 합쳐지다"란 뜻을 가지고 있으며 학술과 친목을 위주로 하고 가족같은 분위기의 동아리입니다.</span>
+                                <span class="card-description">학술과 친목 위주의 동아리입니다!</span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=aune'">
                                     <span>둘러보기</span>
                                 </div>
