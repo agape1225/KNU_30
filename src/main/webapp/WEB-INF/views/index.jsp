@@ -34,9 +34,9 @@
             </div>
             <div class="banner-img school"></div>
             <div class="banner-background"></div>
-<%--            <div class="banner-video">--%>
-<%--                <canvas class="video"></canvas>--%>
-<%--            </div>--%>
+            <%--            <div class="banner-video">--%>
+            <%--                <canvas class="video"></canvas>--%>
+            <%--            </div>--%>
             <div id="particles-dots" class="particles">
                 <!--        CANVAS        -->
             </div>
@@ -47,9 +47,9 @@
                 <span class="section-title">학부 30주년 <strong class="underline">기념 행사</strong> <br></span>
                 <span class="section-title">푸른비전, 청춘의 열정이 살아 숨쉬는 <strong class="underline">강남대학교</strong></span>
             </div>
-            <div class="section-content row">
+            <div class="section-content row introduce-card-list">
                 <div class="col-md-6 col-12 ani-in introduce-card-1">
-                    <div class="card introduce-card">
+                    <div class="card introduce-card" data-id="introduce">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12 ani-in introduce-card-2">
-                    <div class="card introduce-card">
+                    <div class="card introduce-card" data-id="celebration">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
@@ -69,17 +69,17 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12 ani-in introduce-card-3">
-                    <div class="card introduce-card mb-md-0">
+                    <div class="card introduce-card mb-md-0" data-id="lecture">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
-                            <h1 class="card-title">강연</h1>
+                            <h1 class="card-title">졸업생</h1>
                             <span class="card-description">졸업생들의 축하인사와 강연</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 ani-in introduce-card-4">
-                    <div class="card introduce-card mb-0">
+                    <div class="card introduce-card mb-0" data-id="award">
                         <div class="card-img"></div>
                         <div class="card-img-filter"></div>
                         <div class="card-info">
@@ -93,7 +93,7 @@
         <section class="club">
             <div class="section-header">
                 <h1 class="underline">CLUB</h1>
-                <span class="section-title">SW응용학부의 <strong class="underline">6가지</strong> 동아리와 학생회</span>
+                <span class="section-title">SW응용학부의 <strong class="underline">6가지</strong> 동아리</span>
             </div>
             <div class="section-content club-content ani-in">
                 <div class="club-card-list row" style="transform: translateX(0)">
@@ -152,11 +152,11 @@
                     </div>
                     <div class="col-xl-4 col-md-6 col-10" id="MOUSE" data-index="4">
                         <div class="card club-card">
-                            <div class="card-img" style="background-image: url('asset/img/club/maws.jpg')"></div>
+                            <div class="card-img" style="background-image: url('asset/img/club/maws2.png')"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <h1 class="card-title">마우스</h1>
-                                <span class="card-description">안녕하세요, 동아리 마우스입니다.</span>
+                                <span class="card-description">안녕하세요! Mobile Application Web Service 분야로 활동하는 동아리 마우스입니다. </span>
                                 <div class="cta-club cta" onclick="location.href='/detail?name=maws'">
                                     <span>둘러보기</span>
                                 </div>
@@ -190,7 +190,8 @@
             </div>
         </section>
     </div>
-    <section class="event">
+    <section class="event"
+             onclick="window.open('https://form.office.naver.com/form/responseView.cmd?formkey=NDgzMjMyMmEtNmI1NC00YmY0LWI1ZWYtNWMyMmRjYTFmNzk1&sourceId=urlshare')">
         <img src="/asset/img/desktop_banner_2.png" alt="" class="d-none d-sm-block event-img">
         <img src="/asset/img/mobile_banner_2.png" alt="" class="d-sm-none d-block event-img">
     </section>
@@ -204,10 +205,11 @@
                 <c:forEach var="name" items="${comment_list}" varStatus="status">
                     <div class="col-lg-4 col-sm-6 col-12">
                         <div class="card celebration-card">
-                            <div class="card-name"><c:out value="${name.author}"  escapeXml="false" /> </div>
-                            <div class="card-sub"><c:out value="${name.id}"  escapeXml="false" /> / <c:out value="${name.club}"  escapeXml="false" /></div>
+                            <div class="card-name"><c:out value="${name.author}" escapeXml="false"/></div>
+                            <div class="card-sub"><c:out value="${name.id}" escapeXml="false"/> / <c:out
+                                    value="${name.club}" escapeXml="false"/></div>
                             <span class="card-description">
-                                <c:out value="${name.content}"  escapeXml="false" />
+                                <c:out value="${name.content}" escapeXml="false"/>
                             </span>
                         </div>
                     </div>
@@ -227,11 +229,11 @@
                     <span class="section-description">
                         응원글을 남기면, '응원글 이벤트'에 자동으로 응모됩니다.
                         당첨자는 입력해주신 휴대폰 번호로 연락드립니다.
-                        <br />
-                        <br />
-                        이벤트 기간: 00월 00일 ~ 00월 00일 <br />
-                        이벤트 상품: 10만원 상당의 키보드 혹은 마우스 <br />
-                        당첨자 인원: 2명 <br />
+                        <br/>
+                        <br/>
+                        이벤트 기간: 12월 14일 ~ 12월 23일 <br/>
+                        이벤트 상품: 10만원 상당의 키보드 혹은 마우스 <br/>
+                        당첨자 인원: 2명 <br/>
                     </span>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -249,7 +251,8 @@
                                    required/>
                         </div>
                         <div class="form-group col-12 col-sm-6">
-                            <input type="text" name="phone" id="phone_input" class="form-controller" placeholder="휴대전화(이벤트 참여용)"
+                            <input type="text" name="phone" id="phone_input" class="form-controller"
+                                   placeholder="휴대전화(이벤트 참여용)"
                                    required/>
                         </div>
                         <div class="form-group col-12">

@@ -20,7 +20,7 @@ public class DetailController {
 
         if(club_name.equals("cave")){
 
-            video_url = "CAVE_URL";
+            video_url = "Okqi0dC0A_c";
             return_name = "CAVE";
             content = "1. 동아리 소개\n" +
                     "CAVE : \n" +
@@ -41,7 +41,7 @@ public class DetailController {
 
         }else if(club_name.equals("kis")){
 
-            video_url = "CAVE_URL";
+            video_url = "kzlwbE1FNKI";
             return_name = "KIS";
             content = "❗️케아스는 정보보안 동아리입니다. \n\n" +
                     "- BOB, K - shield.Jr, SUA, 해킹캠프 등 정보보안 관련 외부 활동에 참여한 선배들이 많아 많은 정보를 공유해드릴 수 있습니다!\n\n" +
@@ -63,7 +63,7 @@ public class DetailController {
 
         }else if(club_name.equals("cell")){
 
-            video_url = "CAVE_URL";
+            video_url = "k-R2-7U7ar0";
             return_name = "CELL";
             content = "안녕하세요. CELL입니다\uD83D\uDE47\uD83C\uDFFB ♂️\n" +
                     "\n" +
@@ -100,7 +100,7 @@ public class DetailController {
 
         }else if(club_name.equals("aune")){
 
-            video_url = "CAVE_URL";
+            video_url = "d1oHU1wqWY4";
             return_name = "아우내";
             content = "\uD83D\uDCCC안녕하세요 학과동아리 아우내입니다.\n" +
                     "\n" +
@@ -130,7 +130,7 @@ public class DetailController {
 
         }else if(club_name.equals("netapp")){
 
-            video_url = "CAVE_URL";
+            video_url = "EW-Cm34a_Co";
             return_name = "NET APP";
             content = "\uD83C\uDF80신입생 중심\n" +
                     "\n" +
@@ -178,7 +178,7 @@ public class DetailController {
 
         }else if(club_name.equals("maws")){
 
-            video_url = "CAVE_URL";
+            video_url = "Y6iHbZNVUE8";
             return_name = "maws";
             content = "안녕하세요. 소프트웨어응용학부 학과동아리 \uD83D\uDC2DMAWS\uD83D\uDC2D입니다!\n" +
                     "\n" +

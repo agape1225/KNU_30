@@ -12,8 +12,9 @@
             <div class="logo" onclick="location.href ='/'"></div>
             <ul class="menu">
                 <li class="menu-item" onclick="location.href ='/'">홈</li>
-                <li class="menu-item" onclick="location.href = '/history'">학부 연혁</li>
+                <li class="menu-item" onclick="location.href ='/lecture'">졸업생</li>
                 <li class="menu-item" onclick="location.href='/gallery'">학부 갤러리</li>
+                <li class="menu-item" onclick="location.href = '/history'">학부 연혁</li>
             </ul>
             <label for="sidebar-check" class="sidebar-on-btn">
                 <span>메뉴</span>
@@ -26,7 +27,8 @@
     <label class="sidebar-off-btn" for="sidebar-check"></label>
     <ul>
         <li class="sidebar-item" onclick="location.href='/'">홈</li>
-        <li class="sidebar-item" onclick="location.href = '/history'">학부 연혁</li>
+        <li class="menu-item" onclick="location.href ='/lecture'">졸업생</li>
         <li class="sidebar-item" onclick="location.href='/gallery'">학부 갤러리</li>
+        <li class="sidebar-item" onclick="location.href = '/history'">학부 연혁</li>
     </ul>
 </aside>

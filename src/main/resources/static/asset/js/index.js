@@ -93,7 +93,7 @@
                             sceneInfo[i].values.active = true;
                         }
                     default:
-                        console.log('not found name');
+                        break;
                 }
             }
         }
@@ -178,24 +178,24 @@
 
     // TODO scroll move to event
     document.querySelector('.event-move-btn').addEventListener('click', () => {
-        document.querySelector('.comment').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.querySelector('.comment').scrollIntoView({behavior: 'smooth', block: 'center'});
     })
 
     // TODO get celebration
     document.querySelector('.celebration-more-btn').addEventListener('click', () => {
         $.ajax({
-            cache : false,
-            url : "/get_celebration", // 요기에
-            type : 'POST',
-            data : {
+            cache: false,
+            url: "/get_celebration", // 요기에
+            type: 'POST',
+            data: {
                 index: index
             },
-            success : function(data) {
+            success: function (data) {
                 // success
                 console.log('success');
 
                 let celebration_card_list = ``;
-                for(let i = 0; i < data.length; i++) {
+                for (let i = 0; i < data.length; i++) {
                     let celebration_info = data[i];
                     let celebration_card = `
                        <div class="col-lg-4 col-sm-6 col-12">
@@ -212,10 +212,10 @@
                     celebration_card_list += celebration_card;
                 }
 
-                document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', celebration_card_list );
+                document.querySelector('.celebration-card-list').insertAdjacentHTML('beforeend', celebration_card_list);
                 index += 6;
             },
-            error : function(data) {
+            error: function (data) {
                 // error
                 alert('실패했습니다.');
             }
@@ -238,12 +238,12 @@
         form_btn.innerHTML = `<span> 전송중.. </span>`;
 
         $.ajax({
-            cache : false,
-            url : "/submit_celebrate", // 요기에
-            type : 'POST',
-            data : formData,
-            success : function(data) {
-                if(data === "bug") {
+            cache: false,
+            url: "/submit_celebrate", // 요기에
+            type: 'POST',
+            data: formData,
+            success: function (data) {
+                if (data === "bug") {
                     // bug
                     alert("왜 그러시나요...");
                 } else {
@@ -261,19 +261,57 @@
                     `;
 
                     // document.querySelector('.celebration-card-list').innerHTML = html;
-                    document.querySelector('.celebration-card-list').insertAdjacentHTML( 'beforeend', html );
-                    document.querySelector('.card.current').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    document.querySelector('.celebration-card-list').insertAdjacentHTML('beforeend', html);
+                    document.querySelector('.card.current').scrollIntoView({behavior: 'smooth', block: 'center'});
                 }
             },
-            error : function(data) {
+            error: function (data) {
                 // error
                 alert('실패했습니다.');
             },
-            complete: function() {
+            complete: function () {
                 inputReset();
                 document.querySelector('.form-btn').disabled = false;
                 form_btn.innerHTML = `<span>글쓰기</span>`;
             }
         }); // $.ajax */
+    })
+
+    // TODO Move link
+    document.querySelector('.introduce-card-list').addEventListener('click', (e) => {
+        let parent = e.target;
+        let isTure = true;
+
+        // search introduce-card
+        while (true) {
+            if (parent.classList.contains("introduce-card-list")) {
+                isTure = false;
+                break;
+            } else if(parent.classList.contains('introduce-card')) {
+                isTure = true;
+                break;
+            }
+            else {
+                parent = parent.parentNode;
+            }
+
+        }
+
+        if (isTure) {
+            switch (parent.dataset.id) {
+                case "introduce":
+                    window.open("https://www.youtube.com/watch?v=dIYudZLkocE");
+                    break;
+                case "celebration":
+                    window.open("https://youtu.be/YvP2z9mnnW4");
+                    break;
+                case "lecture":
+                    location.href="/lecture";
+                    break;
+                case "award":
+                    window.open("https://youtube.com/watch?v=FWNxkk0ksi4&feature=youtu.be");
+                    break;
+            }
+        }
     })
 })()

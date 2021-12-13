@@ -9,6 +9,10 @@ html, body {
     overflow-x: hidden;
 }
 
+.detail-content{
+    white-space: break-spaces;
+}
+
 .celebration-card::-webkit-scrollbar {
     width: 5px; /*스크롤바의 너비*/
 }
@@ -217,6 +221,10 @@ button {
     background-image: url("/asset/img/club-banner.png");
 }
 
+.banner-img.lecture {
+    background-image: url("/asset/img/graduate-banner.png");
+}
+
 .banner-background {
     position: absolute;
     top: 0;
@@ -230,7 +238,7 @@ button {
     font-size: 0.938rem;
     color: white;
     margin: 30px 0 50px 0;
-    width: 314px;
+    width: 300px;
     line-height: 28px;
     letter-spacing: -0.0417em;
     z-index: 1;
@@ -592,7 +600,7 @@ button {
     padding: 40px;
     border-radius: 20px;
     margin-bottom: 60px;
-    overflow-y: scroll;
+    overflow-y: overlay;
 
     transition: .25s;
 }

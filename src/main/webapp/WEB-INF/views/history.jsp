@@ -55,14 +55,14 @@
                         <span class="history-year">1996.10</span>
                         <span class="history-content">산업전산전자공학부(주간)(산업공학전공,전자계산전공,전자공학전공),(야간)(전자계산학전공)로 통합</span>
                     </div>
-                    <div class="history-info">
-                        <span class="history-year">1997.01</span>
-                        <span class="history-content">교직과정 승인 인원 변경(전자계산교사 8명)</span>
-                    </div>
-                    <div class="history-info">
-                        <span class="history-year">1997.01</span>
-                        <span class="history-content">교직과정 승인 인원 변경(전자계산교사 1997학년도 이전입학자, 8명, 1998학년도 이후 입학자 4명)</span>
-                    </div>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">1997.01</span>--%>
+<%--                        <span class="history-content">교직과정 승인 인원 변경(전자계산교사 8명)</span>--%>
+<%--                    </div>--%>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">1997.01</span>--%>
+<%--                        <span class="history-content">교직과정 승인 인원 변경(전자계산교사 1997학년도 이전입학자, 8명, 1998학년도 이후 입학자 4명)</span>--%>
+<%--                    </div>--%>
                 </div>
             </div>
             <div class="history-box">
@@ -74,26 +74,26 @@
                         <span class="history-year">2000.09</span>
                         <span class="history-content">지식정보공학부(응용수학전공, 산업시스템정보공학전공, 컴퓨터 공학전공, 전자공학전공)로 학부 및 전공명칭 변경, 야간 폐지</span>
                     </div>
-                    <div class="history-info">
-                        <span class="history-year">2000.10</span>
-                        <span class="history-content">교육대학원에 컴퓨터교육전공 석사과정 신설</span>
-                    </div>
-                    <div class="history-info">
-                        <span class="history-year">2001.07</span>
-                        <span class="history-content">산업정보대학원 컴퓨터공학전공 석사과정 신설</span>
-                    </div>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">2000.10</span>--%>
+<%--                        <span class="history-content">교육대학원에 컴퓨터교육전공 석사과정 신설</span>--%>
+<%--                    </div>--%>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">2001.07</span>--%>
+<%--                        <span class="history-content">산업정보대학원 컴퓨터공학전공 석사과정 신설</span>--%>
+<%--                    </div>--%>
                     <div class="history-info">
                         <span class="history-year">2002.09</span>
                         <span class="history-content">	컴퓨터미디어공학부(컴퓨터공학전공, 미디어정보공학전공)으로 분리(70명)</span>
                     </div>
-                    <div class="history-info">
-                        <span class="history-year">2002.12</span>
-                        <span class="history-content">	교직과정 표시과목 변경(정보ㆍ컴퓨터교사 4명)</span>
-                    </div>
-                    <div class="history-info">
-                        <span class="history-year">2004.07</span>
-                        <span class="history-content">산업정보대학원 컴퓨터공학전공 폐지</span>
-                    </div>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">2002.12</span>--%>
+<%--                        <span class="history-content">	교직과정 표시과목 변경(정보ㆍ컴퓨터교사 4명)</span>--%>
+<%--                    </div>--%>
+<%--                    <div class="history-info">--%>
+<%--                        <span class="history-year">2004.07</span>--%>
+<%--                        <span class="history-content">산업정보대학원 컴퓨터공학전공 폐지</span>--%>
+<%--                    </div>--%>
                     <div class="history-info">
                         <span class="history-year">2008.09</span>
                         <span class="history-content">컴퓨터미디어정보공학부 명칭변경 72명</span>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="history-info">
                         <span class="history-year">2020.03</span>
-                        <span class="history-content">ICT공학부(소프트웨어전공, 가상현실전공, IoT전자공학전공, 산업경영공학전공,데이터사이언스전공)로 통합</span>
+                        <span class="history-content"> 2022년 ICT융합공학부(SW,VR,전자공학)</span>
                     </div>
                 </div>
             </div>

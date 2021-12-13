@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="/asset/css/index.css" type="text/css"/>
     <link rel="stylesheet" href="/asset/css/gallery.css">
-    <title>SW응용학부 겔러리</title>
+    <title>SW응용학부 사진관</title>
 </head>
 <body>
 <jsp:include page="include/header.jsp"/>

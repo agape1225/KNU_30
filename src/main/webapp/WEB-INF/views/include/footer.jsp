@@ -8,5 +8,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer class="footer">
     <span>© 2021 강남대학교. All Rights Reserved. Website by &nbsp;<a href="https://bit.ly/3FuOrsW"
-                                                                 target="_blank">CEL</a></span>
+                                                                 target="_blank">CELL</a></span>
 </footer>
