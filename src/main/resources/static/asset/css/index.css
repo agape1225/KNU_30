@@ -466,7 +466,7 @@ button {
 }
 
 .card-img {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -479,12 +479,12 @@ button {
 
 .introduce-card-1 .card .card-img {
     /*background-image: url("/asset/img/test1.jpg");*/
-    background-image: url("/asset/img/card/greeting.png");
+    background-image: url("/asset/img/card/introduce-picture.png");
 }
 
 .introduce-card-2 .card .card-img {
     /*background-image: url("/asset/img/test2.jpg");*/
-    background-image: url("/asset/img/card/30_celebration.png");
+    background-image: url("/asset/img/card/introduce-picture2.png");
 }
 
 .introduce-card-3 .card .card-img {
