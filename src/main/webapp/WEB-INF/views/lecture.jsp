@@ -35,7 +35,7 @@
                 <span class="section-title">강연</span>
             </div>
             <div class="section-content row">
-                <div class="col-lg-4 col-md-6 col-12 graduate-card-1">
+                <div class="col-md-6 col-12 graduate-card-1">
                     <a href="https://www.youtube.com/watch?v=vVPvQe7X_uE" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
@@ -46,7 +46,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12  graduate-card-2">
+                <div class="col-md-6 col-12  graduate-card-2">
                     <a href="https://www.youtube.com/watch?v=xItBEJuB_04" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
@@ -57,13 +57,24 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12 graduate-card-3">
+                <div class="col-md-6 col-12 graduate-card-3">
                     <a href="https://www.youtube.com/watch?v=YO54CE2n5So" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
                             <div class="card-img-filter"></div>
                             <div class="card-info">
                                 <span class="card-description">07학번 안종현 졸업생</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-12 graduate-card-8">
+                    <a href="https://youtu.be/TADeF5yIAPY" target="_blank">
+                        <div class="card introduce-card graduate-card">
+                            <div class="card-img"></div>
+                            <div class="card-img-filter"></div>
+                            <div class="card-info">
+                                <span class="card-description">13학번 이규현 졸업생</span>
                             </div>
                         </div>
                     </a>
@@ -76,7 +87,7 @@
                 <span class="section-title">축하인사</span>
             </div>
             <div class="section-content row">
-                <div class="col-lg-3 col-md-6 col-12 graduate-card-4">
+                <div class="col-lg-6 col-md-6 col-12 graduate-card-4">
                     <a href="https://youtu.be/aQn8ilmmKow" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
@@ -87,7 +98,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12  graduate-card-5">
+                <div class="col-lg-6 col-md-6 col-12  graduate-card-5">
                     <a href="https://www.youtube.com/watch?v=DSqSmnPv2Uo" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
@@ -98,7 +109,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 graduate-card-6">
+                <div class="col-lg-6 col-md-6 col-12 graduate-card-6">
                     <a href="https://www.youtube.com/watch?v=C2z-Et_QuFM" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>
@@ -109,7 +120,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 graduate-card-7">
+                <div class="col-lg-6 col-md-6 col-12 graduate-card-7">
                     <a href="https://www.youtube.com/watch?v=qCANf7JdIgg" target="_blank">
                         <div class="card introduce-card graduate-card">
                             <div class="card-img"></div>

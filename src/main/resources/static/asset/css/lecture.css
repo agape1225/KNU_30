@@ -38,6 +38,11 @@
     background-image: url("/asset/img/graduate/graduate-7.jpg");
 }
 
+.graduate-card-8 .card .card-img {
+    /*background-image: url("/asset/img/test3.jpg");*/
+    background-image: url("/asset/img/graduate/graduate-8.jpg");
+}
+
 .graduate-card .card-description {
     opacity: 1 !important;
 }
