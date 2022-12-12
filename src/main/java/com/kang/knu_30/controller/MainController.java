@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class MainController {
@@ -25,7 +24,14 @@ public class MainController {
         ModelAndView mav = new ModelAndView("index");
         mav.addObject("comment_list", celebrateService.get_celebrate_with_num(0));
 
+        return mav;
+    }
 
+    @RequestMapping("/admin")
+    public ModelAndView admin_login() throws Exception{
+        System.out.println("controller find");
+        ModelAndView mav = new ModelAndView("admin_page/admin_login");
+        mav.addObject("comment_list", celebrateService.get_celebrate_with_num(0));
 
         return mav;
     }
